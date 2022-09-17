@@ -1,0 +1,41 @@
+<body>
+  <div class="container">
+    <table mat-table [dataSource]="datasource">
+
+      <ng-container matColumnDef="id">
+        <th mat-header-cell *matHeaderCellDef> id. </th>
+        <td mat-cell *matCellDef="let element"> {{element.id}} </td>
+      </ng-container>
+
+
+      <ng-container matColumnDef="nombre">
+        <th mat-header-cell *matHeaderCellDef> nombre </th>
+        <td mat-cell *matCellDef="let element"> {{element.nombre}} </td>
+      </ng-container>
+      <ng-container matColumnDef="direccion">
+          <th mat-header-cell *matHeaderCellDef> direccion </th>
+          <td mat-cell *matCellDef="let element"> {{element.direccion}} </td>
+        </ng-container>
+        <ng-container matColumnDef="resenha">
+          <th mat-header-cell *matHeaderCellDef> resenha </th>
+          <td mat-cell *matCellDef="let element"> {{element.resenha}} </td>
+        </ng-container>
+        <ng-container matColumnDef="calificacion">
+          <th mat-header-cell *matHeaderCellDef> calificacion </th>
+          <td mat-cell *matCellDef="let element"> {{element.calificacion}} </td>
+        </ng-container>
+        <ng-container matColumnDef="id_duenho">
+          <th mat-header-cell *matHeaderCellDef> id_duenho </th>
+          <td mat-cell *matCellDef="let element"> {{element.id_duenho.id}} </td>
+        </ng-container>
+        <ng-container matColumnDef="id_tipo_pago">
+          <th mat-header-cell *matHeaderCellDef> id_tipo_pago </th>
+          <td mat-cell *matCellDef="let element"> {{element.id_tipo_pago.id}} </td>
+        </ng-container>
+
+
+      <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+      <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+    </table>
+  </div>
+</body>
