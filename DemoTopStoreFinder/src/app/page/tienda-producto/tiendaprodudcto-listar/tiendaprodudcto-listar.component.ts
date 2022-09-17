@@ -1,7 +1,7 @@
 import { TiendaProductoService } from './../../../service/tienda-producto.service';
 import { TiendaProducto } from './../../../model/tiendaProducto';
-import { Component, OnInit } from '@angular/core';
 import { MatTableDataSource } from '@angular/material/table';
+import { Component, OnInit } from '@angular/core';
 
 @Component({
   selector: 'app-tiendaprodudcto-listar',

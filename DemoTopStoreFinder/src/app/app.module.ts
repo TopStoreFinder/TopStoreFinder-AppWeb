@@ -25,6 +25,10 @@ import { CompradorubicacionListarComponent } from './page/comprador-ubicacion/co
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { HttpClientModule } from '@angular/common/http';
 import { MatTableModule } from '@angular/material/table';
+import { StockComponent } from './page/stock/stock.component';
+import { StokcListarComponent } from './page/stock/stokc-listar/stokc-listar.component';
+import { TipoProductoComponent } from './page/tipo-producto/tipo-producto.component';
+import { TipoProductoListarComponent } from './page/tipo-producto/tipo-producto-listar/tipo-producto-listar.component';
 
 
 @NgModule({
@@ -47,7 +51,11 @@ import { MatTableModule } from '@angular/material/table';
     UbicacionComponent,
     CompradorUbicacionComponent,
     UbicacionListarComponent,
-    CompradorubicacionListarComponent
+    CompradorubicacionListarComponent,
+    StockComponent,
+    StokcListarComponent,
+    TipoProductoComponent,
+    TipoProductoListarComponent
   ],
   imports: [
     BrowserModule,

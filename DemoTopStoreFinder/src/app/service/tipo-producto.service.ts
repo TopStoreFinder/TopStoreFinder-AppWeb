@@ -1,4 +1,4 @@
-import { TipoProducto } from './../Model/TipoProducto';
+import { TipoProducto } from './../model/TipoProducto';
 import { Injectable } from '@angular/core';
 import {HttpClient, HttpXsrfTokenExtractor} from '@angular/common/http';
 @Injectable({

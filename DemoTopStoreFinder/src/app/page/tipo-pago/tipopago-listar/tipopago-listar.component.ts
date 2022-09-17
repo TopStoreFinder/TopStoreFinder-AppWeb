@@ -1,7 +1,7 @@
-import { Component, OnInit } from '@angular/core';
 import { TipoPagoService } from 'src/app/service/tipo-pago.service';
 import { TipoPago } from 'src/app/model/tipoPago';
 import { MatTableDataSource } from '@angular/material/table';
+import { Component, OnInit } from '@angular/core';
 
 @Component({
   selector: 'app-tipopago-listar',
