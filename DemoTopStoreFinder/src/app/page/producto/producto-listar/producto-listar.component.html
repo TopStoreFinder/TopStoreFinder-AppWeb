@@ -1,0 +1,40 @@
+<p>tipo-producto-listar works!</p>
+<div class="container">
+  <table mat-table [dataSource]="datasource" class="table">
+
+    <!--- Note that these columns can be defined in any order.
+          The actual rendered columns are set as a property on the row definition" -->
+
+    <!-- Position Column -->
+    <ng-container matColumnDef="id">
+      <th mat-header-cell *matHeaderCellDef> No. </th>
+      <td mat-cell *matCellDef="let element"> {{element.id}} </td>
+    </ng-container>
+
+    <!-- Name Column -->
+    <ng-container matColumnDef="nombreProducto">
+      <th mat-header-cell *matHeaderCellDef> nombreProducto </th>
+      <td mat-cell *matCellDef="let element"> {{element.nombreProducto}} </td>
+    </ng-container>
+    <ng-container matColumnDef="productoDescripcion">
+        <th mat-header-cell *matHeaderCellDef> productoDescripcion </th>
+        <td mat-cell *matCellDef="let element"> {{element.productoDescripcion}} </td>
+      </ng-container>
+      <ng-container matColumnDef="cantidad">
+        <th mat-header-cell *matHeaderCellDef> cantidad </th>
+        <td mat-cell *matCellDef="let element"> {{element.cantidad.id}} </td>
+      </ng-container>
+      <ng-container matColumnDef="precioUnidad">
+        <th mat-header-cell *matHeaderCellDef> precioUnidad </th>
+        <td mat-cell *matCellDef="let element"> {{element.precioUnidad}} </td>
+      </ng-container>
+      <ng-container matColumnDef="categoriaProdcuto">
+        <th mat-header-cell *matHeaderCellDef> categoriaProdcuto </th>
+        <td mat-cell *matCellDef="let element"> {{element.categoriaProdcuto.id}} </td>
+      </ng-container>
+
+
+    <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+    <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+  </table>
+</div>

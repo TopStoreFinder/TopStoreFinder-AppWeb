@@ -8,6 +8,12 @@ import { TiendalistarComponent } from './page/tienda/tiendalistar/tiendalistar.c
 import { TiendaListarComponent } from './page/tienda/tienda-listar/tienda-listar.component';
 import { TiendaProductoComponent } from './page/tienda-producto/tienda-producto.component';
 import { TiendaprodudctoListarComponent } from './page/tienda-producto/tiendaprodudcto-listar/tiendaprodudcto-listar.component';
+import { ProductoComponent } from './page/producto/producto.component';
+import { ReseniaCalificacionComponent } from './page/resenia-calificacion/resenia-calificacion.component';
+import { TipoPagoComponent } from './page/tipo-pago/tipo-pago.component';
+import { ProductoListarComponent } from './page/producto/producto-listar/producto-listar.component';
+import { ReseniacalificacionListarComponent } from './page/resenia-calificacion/reseniacalificacion-listar/reseniacalificacion-listar.component';
+import { TipopagoListarComponent } from './page/tipo-pago/tipopago-listar/tipopago-listar.component';
 
 @NgModule({
   declarations: [
@@ -16,7 +22,13 @@ import { TiendaprodudctoListarComponent } from './page/tienda-producto/tiendapro
     TiendalistarComponent,
     TiendaListarComponent,
     TiendaProductoComponent,
-    TiendaprodudctoListarComponent
+    TiendaprodudctoListarComponent,
+    ProductoComponent,
+    ReseniaCalificacionComponent,
+    TipoPagoComponent,
+    ProductoListarComponent,
+    ReseniacalificacionListarComponent,
+    TipopagoListarComponent
   ],
   imports: [
     BrowserModule,

@@ -1,0 +1,34 @@
+<body>
+  <div class="container">
+    <table mat-table [dataSource]="dataSource" class="table">
+
+      <ng-container matColumnDef="id">
+        <th mat-header-cell *matHeaderCellDef> No. </th>
+        <td mat-cell *matCellDef="let element"> {{element.id}} </td>
+      </ng-container>
+
+      <ng-container matColumnDef="qEstrellas">
+        <th mat-header-cell *matHeaderCellDef> qEstrellas </th>
+        <td mat-cell *matCellDef="let element"> {{element.qEstrellas}} </td>
+      </ng-container>
+
+      <ng-container matColumnDef="Resenia">
+        <th mat-header-cell *matHeaderCellDef> Reseña </th>
+        <td mat-cell *matCellDef="let element"> {{element.Resenia}} </td>
+      </ng-container>
+
+      <ng-container matColumnDef="Cliente_id">
+        <th mat-header-cell *matHeaderCellDef> Cliente_id </th>
+        <td mat-cell *matCellDef="let element"> {{element.Cliente_id.id}} </td>
+      </ng-container>
+
+      <ng-container matColumnDef="Tienda_id">
+        <th mat-header-cell *matHeaderCellDef> Tienda_id </th>
+        <td mat-cell *matCellDef="let element"> {{element.Tienda_id.id}} </td>
+      </ng-container>
+
+      <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+      <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+    </table>
+  </div>
+</body>
