@@ -14,6 +14,7 @@ import { TipoPagoComponent } from './page/tipo-pago/tipo-pago.component';
 import { ProductoListarComponent } from './page/producto/producto-listar/producto-listar.component';
 import { ReseniacalificacionListarComponent } from './page/resenia-calificacion/reseniacalificacion-listar/reseniacalificacion-listar.component';
 import { TipopagoListarComponent } from './page/tipo-pago/tipopago-listar/tipopago-listar.component';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 @NgModule({
   declarations: [
@@ -32,7 +33,8 @@ import { TipopagoListarComponent } from './page/tipo-pago/tipopago-listar/tipopa
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    BrowserAnimationsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
