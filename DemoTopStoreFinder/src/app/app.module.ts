@@ -40,7 +40,8 @@ import { CompradorListarComponent } from './page/comprador/comprador-listar/comp
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    BrowserAnimationsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
