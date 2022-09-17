@@ -1,3 +1,4 @@
+import { MatTableDataSource } from '@angular/material/table';
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 
@@ -23,6 +24,7 @@ import { UbicacionListarComponent } from './page/ubicacion/ubicacion-listar/ubic
 import { CompradorubicacionListarComponent } from './page/comprador-ubicacion/compradorubicacion-listar/compradorubicacion-listar.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { HttpClientModule } from '@angular/common/http';
+import { MatTableModule } from '@angular/material/table';
 
 
 @NgModule({
@@ -52,7 +54,7 @@ import { HttpClientModule } from '@angular/common/http';
     AppRoutingModule,
     BrowserAnimationsModule,
     HttpClientModule,
-    AppRoutingModule
+    MatTableModule
   ],
   providers: [],
   bootstrap: [AppComponent]
