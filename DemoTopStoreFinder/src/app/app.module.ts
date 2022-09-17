@@ -14,6 +14,10 @@ import { TipoPagoComponent } from './page/tipo-pago/tipo-pago.component';
 import { ProductoListarComponent } from './page/producto/producto-listar/producto-listar.component';
 import { ReseniacalificacionListarComponent } from './page/resenia-calificacion/reseniacalificacion-listar/reseniacalificacion-listar.component';
 import { TipopagoListarComponent } from './page/tipo-pago/tipopago-listar/tipopago-listar.component';
+import { DuenhoComponent } from './page/duenho/duenho.component';
+import { CompradorComponent } from './page/comprador/comprador.component';
+import { DuenhoListarComponent } from './page/duenho/duenho-listar/duenho-listar.component';
+import { CompradorListarComponent } from './page/comprador/comprador-listar/comprador-listar.component';
 
 @NgModule({
   declarations: [
@@ -28,7 +32,11 @@ import { TipopagoListarComponent } from './page/tipo-pago/tipopago-listar/tipopa
     TipoPagoComponent,
     ProductoListarComponent,
     ReseniacalificacionListarComponent,
-    TipopagoListarComponent
+    TipopagoListarComponent,
+    DuenhoComponent,
+    CompradorComponent,
+    DuenhoListarComponent,
+    CompradorListarComponent
   ],
   imports: [
     BrowserModule,
