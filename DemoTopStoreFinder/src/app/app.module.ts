@@ -14,10 +14,16 @@ import { TipoPagoComponent } from './page/tipo-pago/tipo-pago.component';
 import { ProductoListarComponent } from './page/producto/producto-listar/producto-listar.component';
 import { ReseniacalificacionListarComponent } from './page/resenia-calificacion/reseniacalificacion-listar/reseniacalificacion-listar.component';
 import { TipopagoListarComponent } from './page/tipo-pago/tipopago-listar/tipopago-listar.component';
+<<<<<<< HEAD
 import { DuenhoComponent } from './page/duenho/duenho.component';
 import { CompradorComponent } from './page/comprador/comprador.component';
 import { DuenhoListarComponent } from './page/duenho/duenho-listar/duenho-listar.component';
 import { CompradorListarComponent } from './page/comprador/comprador-listar/comprador-listar.component';
+=======
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { HttpClientModule } from '@angular/common/http';
+
+>>>>>>> fa39fdb035440860630be8ab7e84b21774e5d6f6
 
 @NgModule({
   declarations: [
@@ -41,7 +47,9 @@ import { CompradorListarComponent } from './page/comprador/comprador-listar/comp
   imports: [
     BrowserModule,
     AppRoutingModule,
-    BrowserAnimationsModule
+    BrowserAnimationsModule,
+    HttpClientModule,
+    AppRoutingModule
   ],
   providers: [],
   bootstrap: [AppComponent]
