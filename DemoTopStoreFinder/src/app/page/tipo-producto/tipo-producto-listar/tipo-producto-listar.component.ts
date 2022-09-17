@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { TipoProdcutoService } from 'src/app/service/tipo-prodcuto.service';
+import { TipoProdcutoService } from 'src/app/service/tipo-producto.service';
 import { TipoProducto } from 'src/app/model/TipoProducto';
 import { MatTableDataSource } from '@angular/material/table'
 @Component({
