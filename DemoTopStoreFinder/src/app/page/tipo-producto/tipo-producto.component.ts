@@ -1,5 +1,6 @@
-import { Component, OnInit } from '@angular/core';
 
+import { ActivatedRoute } from '@angular/router';
+import { Component, OnInit } from '@angular/core';
 @Component({
   selector: 'app-tipo-producto',
   templateUrl: './tipo-producto.component.html',
@@ -7,7 +8,7 @@ import { Component, OnInit } from '@angular/core';
 })
 export class TipoProductoComponent implements OnInit {
 
-  constructor() { }
+  constructor(public route:ActivatedRoute) { }
 
   ngOnInit(): void {
   }

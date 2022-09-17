@@ -1,1 +1,4 @@
-<p>stock works!</p>
+<router-outlet></router-outlet>
+<div [hidden]="route.children.length!==0">
+  <app-stokc-listar></app-stokc-listar>
+</div>
