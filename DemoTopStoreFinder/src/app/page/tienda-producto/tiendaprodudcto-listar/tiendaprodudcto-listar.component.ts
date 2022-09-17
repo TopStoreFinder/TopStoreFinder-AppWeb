@@ -1,4 +1,7 @@
+import { TiendaProductoService } from './../../../service/tienda-producto.service';
+import { TiendaProducto } from './../../../model/tiendaProducto';
 import { Component, OnInit } from '@angular/core';
+import { MatTableDataSource } from '@angular/material/table';
 
 @Component({
   selector: 'app-tiendaprodudcto-listar',
@@ -6,10 +9,14 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./tiendaprodudcto-listar.component.css']
 })
 export class TiendaprodudctoListarComponent implements OnInit {
-
-  constructor() { }
+  datasource: MatTableDataSource<TiendaProducto> = new MatTableDataSource();
+  displayedColumns: string[] = ['producto_id', 'tienda_id'];
+  constructor(private tps: TiendaProductoService) { }
 
   ngOnInit(): void {
+    this.tps.listar().subscribe(data => {
+      this.datasource = new MatTableDataSource(data);
+    })
   }
 
 }
