@@ -18,6 +18,9 @@ export class TipopagoListarComponent implements OnInit {
     this.tps.listar().subscribe(data => {
       this.datasource = new MatTableDataSource(data);
     })
+    this.tps.getLista().subscribe(data => {
+      this.datasource = new MatTableDataSource(data);
+    });
   }
 
 }
