@@ -29,12 +29,6 @@ import { StockComponent } from './page/stock/stock.component';
 import { StokcListarComponent } from './page/stock/stokc-listar/stokc-listar.component';
 import { TipoProductoComponent } from './page/tipo-producto/tipo-producto.component';
 import { TipoProductoListarComponent } from './page/tipo-producto/tipo-producto-listar/tipo-producto-listar.component';
-import { MatInputModule } from '@angular/material/input';
-import { MatButtonModule } from '@angular/material/button';
-import{MatIconModule} from'@angular/material/icon';
-import { FormsModule } from '@angular/forms';
-import { TipopagoCreaeditaComponent } from './page/tipo-pago/tipopago-creaedita/tipopago-creaedita.component';
-
 @NgModule({
   declarations: [
     AppComponent,
@@ -59,8 +53,7 @@ import { TipopagoCreaeditaComponent } from './page/tipo-pago/tipopago-creaedita/
     StockComponent,
     StokcListarComponent,
     TipoProductoComponent,
-    TipoProductoListarComponent,
-    TipopagoCreaeditaComponent
+    TipoProductoListarComponent
   ],
   imports: [
     BrowserModule,
@@ -68,10 +61,6 @@ import { TipopagoCreaeditaComponent } from './page/tipo-pago/tipopago-creaedita/
     BrowserAnimationsModule,
     HttpClientModule,
     MatTableModule,
-    MatInputModule,
-    MatButtonModule,
-    MatIconModule,
-    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
