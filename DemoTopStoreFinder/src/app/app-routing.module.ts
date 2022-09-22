@@ -11,12 +11,11 @@ import { ReseniaCalificacionComponent } from './page/resenia-calificacion/reseni
 import { ProductoComponent } from './page/producto/producto.component';
 import { TiendaProductoComponent } from './page/tienda-producto/tienda-producto.component';
 import { TiendaComponent } from './page/tienda/tienda.component';
-import { TipopagoCreaeditaComponent } from './page/tipo-pago/tipopago-creaedita/tipopago-creaedita.component';
+
 
 const routes: Routes = [
   {
     path: 'tipopago', component: TipoPagoComponent, children: [
-      { path: 'nuevo', component: TipopagoCreaeditaComponent }
 
     ]
   }, {

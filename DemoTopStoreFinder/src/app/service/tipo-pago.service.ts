@@ -14,14 +14,5 @@ export class TipoPagoService {
   listar() {
     return this.http.get<TipoPago[]>(this.url);
   }
-  insertar(propietario: TipoPago) {
-    return this.http.post(this.url, propietario);
-  }
-  setLista(listaNueva: TipoPago[]) {
-    this.listaCambio.next(listaNueva);
-  }
-  getLista() {
-    return this.listaCambio.asObservable();
-  }
 
 }
