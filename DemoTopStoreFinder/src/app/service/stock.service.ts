@@ -5,7 +5,7 @@ import { Stock } from './../model/Stock';
   providedIn: 'root'
 })
 export class StockService {
-url: string = "http://localhost:5000//stock"
+url: string = "http://localhost:5000/stock"
   constructor(private http:HttpClient) { }
   listar(){
     return this.http.get<Stock[]>(this.url);

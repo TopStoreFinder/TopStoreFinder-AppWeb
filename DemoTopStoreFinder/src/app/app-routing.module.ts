@@ -1,10 +1,10 @@
+import { StockComponent } from './page/stock/stock.component';
 import { TipopagoCreaeditaComponent } from './page/tipo-pago/tipopago-creaedita/tipopago-creaedita.component';
 import { TipoPagoComponent } from './page/tipo-pago/tipo-pago.component';
 import { CompradorComponent } from './page/comprador/comprador.component';
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { TipoProductoComponent } from './page/tipo-producto/tipo-producto.component';
-import { StockComponent } from './page/stock/stock.component';
 import { UbicacionComponent } from './page/ubicacion/ubicacion.component';
 import { DuenhoComponent } from './page/duenho/duenho.component';
 import { CompradorUbicacionComponent } from './page/comprador-ubicacion/comprador-ubicacion.component';
@@ -25,10 +25,6 @@ const routes: Routes = [
     ]
   }, {
     path: 'tipoproducto', component: TipoProductoComponent, children: [
-
-    ]
-  }, {
-    path: 'stock', component: StockComponent, children: [
 
     ]
   }, {
@@ -57,6 +53,11 @@ const routes: Routes = [
     ]
   }, {
     path: 'comprador', component: CompradorComponent, children: [
+
+    ]
+  },
+  {
+    path: 'stock', component: StockComponent, children: [
 
     ]
   }

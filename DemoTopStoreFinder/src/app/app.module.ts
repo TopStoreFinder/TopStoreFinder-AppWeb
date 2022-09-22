@@ -25,8 +25,6 @@ import { CompradorubicacionListarComponent } from './page/comprador-ubicacion/co
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { HttpClientModule } from '@angular/common/http';
 import { MatTableModule } from '@angular/material/table';
-import { StockComponent } from './page/stock/stock.component';
-import { StokcListarComponent } from './page/stock/stokc-listar/stokc-listar.component';
 import { TipoProductoComponent } from './page/tipo-producto/tipo-producto.component';
 import { TipoProductoListarComponent } from './page/tipo-producto/tipo-producto-listar/tipo-producto-listar.component';
 import { MatInputModule } from '@angular/material/input';
@@ -34,6 +32,8 @@ import { MatButtonModule } from '@angular/material/button';
 import{MatIconModule} from'@angular/material/icon';
 import { FormsModule } from '@angular/forms';
 import { TipopagoCreaeditaComponent } from './page/tipo-pago/tipopago-creaedita/tipopago-creaedita.component';
+import { StockComponent } from './page/stock/stock.component';
+import { StockListarComponent } from './page/stock/stock-listar/stock-listar.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -55,11 +55,11 @@ import { TipopagoCreaeditaComponent } from './page/tipo-pago/tipopago-creaedita/
     CompradorUbicacionComponent,
     UbicacionListarComponent,
     CompradorubicacionListarComponent,
-    StockComponent,
-    StokcListarComponent,
     TipoProductoComponent,
     TipoProductoListarComponent,
-    TipopagoCreaeditaComponent
+    TipopagoCreaeditaComponent,
+    StockComponent,
+    StockListarComponent
   ],
   imports: [
     BrowserModule,

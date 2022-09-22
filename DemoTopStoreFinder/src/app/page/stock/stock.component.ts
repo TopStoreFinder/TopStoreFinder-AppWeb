@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
+
 @Component({
   selector: 'app-stock',
   templateUrl: './stock.component.html',
@@ -7,7 +8,7 @@ import { ActivatedRoute } from '@angular/router';
 })
 export class StockComponent implements OnInit {
 
-  constructor(public route:ActivatedRoute) { }
+  constructor(public route: ActivatedRoute) { }
 
   ngOnInit(): void {
   }
