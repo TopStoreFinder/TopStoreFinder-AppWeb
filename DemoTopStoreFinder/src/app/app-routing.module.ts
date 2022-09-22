@@ -1,3 +1,4 @@
+import { ProductoCreaeditaComponent } from './page/producto/producto-creaedita/producto-creaedita.component';
 import { StockComponent } from './page/stock/stock.component';
 import { TipopagoCreaeditaComponent } from './page/tipo-pago/tipopago-creaedita/tipopago-creaedita.component';
 import { TipoPagoComponent } from './page/tipo-pago/tipo-pago.component';
@@ -30,7 +31,8 @@ const routes: Routes = [
     ]
   }, {
     path: 'producto', component: ProductoComponent, children: [
-
+      { path: 'nuevo', component: ProductoCreaeditaComponent },
+    { path: 'edicion/:id', component: ProductoCreaeditaComponent }
     ]
   }, {
     path: 'compradorubicacion', component: CompradorUbicacionComponent, children: [

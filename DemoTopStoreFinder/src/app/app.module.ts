@@ -34,6 +34,7 @@ import { FormsModule } from '@angular/forms';
 import { TipopagoCreaeditaComponent } from './page/tipo-pago/tipopago-creaedita/tipopago-creaedita.component';
 import { StockComponent } from './page/stock/stock.component';
 import { StockListarComponent } from './page/stock/stock-listar/stock-listar.component';
+import { ProductoCreaeditaComponent } from './page/producto/producto-creaedita/producto-creaedita.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -59,7 +60,8 @@ import { StockListarComponent } from './page/stock/stock-listar/stock-listar.com
     TipoProductoListarComponent,
     TipopagoCreaeditaComponent,
     StockComponent,
-    StockListarComponent
+    StockListarComponent,
+    ProductoCreaeditaComponent
   ],
   imports: [
     BrowserModule,
