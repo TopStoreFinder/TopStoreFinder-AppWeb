@@ -19,6 +19,7 @@ export class TipopagoListarComponent implements OnInit {
       this.datasource = new MatTableDataSource(data);
     })
 
+
   }
 
 }
