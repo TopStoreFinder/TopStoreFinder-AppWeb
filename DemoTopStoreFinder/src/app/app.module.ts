@@ -29,6 +29,7 @@ import { StockComponent } from './page/stock/stock.component';
 import { StokcListarComponent } from './page/stock/stokc-listar/stokc-listar.component';
 import { TipoProductoComponent } from './page/tipo-producto/tipo-producto.component';
 import { TipoProductoListarComponent } from './page/tipo-producto/tipo-producto-listar/tipo-producto-listar.component';
+import { DuenhoCreaeditaComponent } from './page/duenho/duenho-creaedita/duenho-creaedita.component';
 
 
 @NgModule({
@@ -55,7 +56,8 @@ import { TipoProductoListarComponent } from './page/tipo-producto/tipo-producto-
     StockComponent,
     StokcListarComponent,
     TipoProductoComponent,
-    TipoProductoListarComponent
+    TipoProductoListarComponent,
+    DuenhoCreaeditaComponent
   ],
   imports: [
     BrowserModule,
