@@ -17,6 +17,9 @@ export class DuenhoListarComponent implements OnInit {
     this.d.listar().subscribe(data => {
       this.datasource = new MatTableDataSource(data);
     })
+    this.d.getLista().subscribe(data =>{
+      this.datasource = new MatTableDataSource(data);
+    });
   }
 
 }
