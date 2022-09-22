@@ -1,3 +1,4 @@
+import { TipopagoCreaeditaComponent } from './page/tipo-pago/tipopago-creaedita/tipopago-creaedita.component';
 import { TipoPagoComponent } from './page/tipo-pago/tipo-pago.component';
 import { CompradorComponent } from './page/comprador/comprador.component';
 import { NgModule } from '@angular/core';
@@ -16,7 +17,7 @@ import { TiendaComponent } from './page/tienda/tienda.component';
 const routes: Routes = [
   {
     path: 'tipopago', component: TipoPagoComponent, children: [
-
+      {path: 'nuevo', component: TipopagoCreaeditaComponent}
     ]
   }, {
     path: 'reseniacalificacion', component: ReseniaCalificacionComponent, children: [

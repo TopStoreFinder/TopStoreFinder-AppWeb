@@ -9,10 +9,20 @@ import { Subject } from 'rxjs';
 export class TipoPagoService {
   url: string = "http://localhost:5000/tipopagos"
   private listaCambio = new Subject<TipoPago[]>()
+
   constructor(private http: HttpClient) { }
 
   listar() {
     return this.http.get<TipoPago[]>(this.url);
+  }
+  insertar(propietario: TipoPago) {
+    return this.http.post(this.url, propietario);
+  }
+  setLista(listaNueva: TipoPago[]) {
+    this.listaCambio.next(listaNueva);
+  }
+  getLista() {
+    return this.listaCambio.asObservable();
   }
 
 }
