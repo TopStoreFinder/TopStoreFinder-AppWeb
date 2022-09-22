@@ -17,7 +17,8 @@ import { TiendaComponent } from './page/tienda/tienda.component';
 const routes: Routes = [
   {
     path: 'tipopago', component: TipoPagoComponent, children: [
-      {path: 'nuevo', component: TipopagoCreaeditaComponent}
+      {path: 'nuevo', component: TipopagoCreaeditaComponent},
+      { path: 'edicion/:id', component: TipopagoCreaeditaComponent }
     ]
   }, {
     path: 'reseniacalificacion', component: ReseniaCalificacionComponent, children: [

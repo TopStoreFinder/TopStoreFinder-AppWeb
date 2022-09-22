@@ -10,7 +10,7 @@ import { Component, OnInit } from '@angular/core';
 })
 export class TipopagoListarComponent implements OnInit {
   datasource: MatTableDataSource<TipoPago> = new MatTableDataSource();
-  displayedColumns: string[] = ['id', 'tipo'];
+  displayedColumns: string[] = ['id', 'tipo','acciones'];
 
   constructor(private tps: TipoPagoService) { }
 
