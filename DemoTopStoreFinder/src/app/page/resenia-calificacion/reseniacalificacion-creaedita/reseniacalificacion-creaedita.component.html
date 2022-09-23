@@ -1,0 +1,44 @@
+<div class="container">
+
+  <h1>reseniacalificacion</h1>
+
+  <mat-form-field class="example-full-width">
+    <mat-label>id</mat-label>
+    <input matInput placeholder="id" [(ngModel)]="reseniacalifi.id">
+  </mat-form-field>
+
+  <br>
+
+  <mat-form-field class="example-full-width">
+    <mat-label>qEstrellas</mat-label>
+    <input matInput required placeholder="qEstrellas" [(ngModel)]="reseniacalifi.qEstrellas">
+
+  </mat-form-field>
+
+  <br>
+  <mat-form-field class="example-full-width">
+    <mat-label>Resenia</mat-label>
+    <input matInput required placeholder="Resenia" [(ngModel)]="reseniacalifi.Resenia">
+
+  </mat-form-field>
+
+  <br>
+  <mat-form-field class="example-full-width">
+    <mat-label>Cliente_id</mat-label>
+    <input matInput required placeholder="Cliente_id" [(ngModel)]="reseniacalifi.Cliente_id">
+
+  </mat-form-field>
+
+  <br>
+  <mat-form-field class="example-full-width">
+    <mat-label>Tienda_id</mat-label>
+    <input matInput required placeholder="Tienda_id" [(ngModel)]="reseniacalifi.Tienda_id">
+
+  </mat-form-field>
+
+  <br>
+  <button mat-raised-button color="primary" (click)="aceptar()">Aceptar</button>
+  <button mat-raised-button color="warn" routerLink="/reseniacalificacion">Cancelar</button>
+  <p>{{mensaje}}</p>
+
+</div>

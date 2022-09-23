@@ -10,13 +10,16 @@ import { ReseñaCalificacionService } from 'src/app/service/reseña-calificacion
 })
 export class ReseniacalificacionListarComponent implements OnInit {
   dataSource: MatTableDataSource<reseCalificacion> = new MatTableDataSource();
-  displayedColumns: string[] = ['id', 'qEstrellas', 'Resenia', 'Cliente_id', 'Tienda_id']
+  displayedColumns: string[] = ['id', 'qEstrellas', 'Resenia', 'Cliente_id', 'Tienda_id','acciones']
   constructor(private rcs: ReseñaCalificacionService) { }
 
   ngOnInit(): void {
     this.rcs.listar().subscribe(d => {
       this.dataSource = new MatTableDataSource(d);
     })
+    this.rcs.getLista().subscribe(data => {
+      this.dataSource = new MatTableDataSource(data);
+    });
 
   }
 

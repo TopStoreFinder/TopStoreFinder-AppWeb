@@ -35,6 +35,7 @@ import { TipopagoCreaeditaComponent } from './page/tipo-pago/tipopago-creaedita/
 import { StockComponent } from './page/stock/stock.component';
 import { StockListarComponent } from './page/stock/stock-listar/stock-listar.component';
 import { ProductoCreaeditaComponent } from './page/producto/producto-creaedita/producto-creaedita.component';
+import { ReseniacalificacionCreaeditaComponent } from './page/resenia-calificacion/reseniacalificacion-creaedita/reseniacalificacion-creaedita.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -61,7 +62,8 @@ import { ProductoCreaeditaComponent } from './page/producto/producto-creaedita/p
     TipopagoCreaeditaComponent,
     StockComponent,
     StockListarComponent,
-    ProductoCreaeditaComponent
+    ProductoCreaeditaComponent,
+    ReseniacalificacionCreaeditaComponent
   ],
   imports: [
     BrowserModule,
