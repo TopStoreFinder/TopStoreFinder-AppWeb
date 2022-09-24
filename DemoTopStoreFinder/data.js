@@ -69,7 +69,7 @@ module.exports = function () {
       {
         id: 2,
         enStock: 10,
-        s: "23/04/22",
+        LastUpdateTime: "23/04/22",
       },
       {
         id: 3,

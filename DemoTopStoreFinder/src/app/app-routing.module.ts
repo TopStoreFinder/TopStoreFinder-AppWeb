@@ -18,6 +18,7 @@ import { TiendaComponent } from './page/tienda/tienda.component';
 import { CompradorCreaeditaComponent } from './page/comprador/comprador-creaedita/comprador-creaedita.component';
 import { tiendaCreaeditaComponent } from './page/tienda/tienda-creaedita/tienda-creaedita.component';
 import { DuenhoCreaeditaComponent } from './page/duenho/duenho-creaedita/duenho-creaedita.component';
+import { StockCreaeditaComponent } from './page/stock/stock-creaedita/stock-creaedita.component';
 
 const routes: Routes = [
   {
@@ -71,7 +72,8 @@ const routes: Routes = [
     ]
   },{
     path: 'stock', component: StockComponent, children: [
-
+      { path: 'nuevo', component: StockCreaeditaComponent },
+      { path: 'edicion/:id', component: StockCreaeditaComponent }
     ]
   }
 
