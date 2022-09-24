@@ -46,6 +46,7 @@ import { MatDialogModule } from '@angular/material/dialog';
 import { ProductoDialogoComponent } from './page/producto/producto-listar/producto-dialogo/producto-dialogo.component';
 import { ReseniacalificacionDialogoComponent } from './page/resenia-calificacion/reseniacalificacion-listar/reseniacalificacion-dialogo/reseniacalificacion-dialogo.component';
 import { TiendaBuscarComponent } from './page/tienda/tienda-buscar/tienda-buscar.component';
+import { TipopagoBuscarComponent } from './page/tipo-pago/tipopago-buscar/tipopago-buscar.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -82,7 +83,8 @@ import { TiendaBuscarComponent } from './page/tienda/tienda-buscar/tienda-buscar
     TipopagoDialogoComponent,
     ProductoDialogoComponent,
     ReseniacalificacionDialogoComponent,
-    TiendaBuscarComponent
+    TiendaBuscarComponent,
+    TipopagoBuscarComponent
   ],
   imports: [
     BrowserModule,
