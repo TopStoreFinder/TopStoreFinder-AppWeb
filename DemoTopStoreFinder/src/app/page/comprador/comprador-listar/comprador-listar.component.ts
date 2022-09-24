@@ -10,13 +10,16 @@ import { MatTableDataSource } from '@angular/material/table';
 })
 export class CompradorListarComponent implements OnInit {
   datasource: MatTableDataSource<Comprador> = new MatTableDataSource();
-  displayedColumns: string[] = ['id', 'nombre','apellido','ciudad_id'];
+  displayedColumns: string[] = ['id', 'nombre','apellido','ciudad_id','acciones'];
   constructor(private c: CompradorService) { }
 
   ngOnInit(): void {
     this.c.listar().subscribe(data => {
       this.datasource = new MatTableDataSource(data);
     })
+    this.c.getLista().subscribe(a => {
+      this.datasource = new MatTableDataSource(a);
+    });
   }
 
 }

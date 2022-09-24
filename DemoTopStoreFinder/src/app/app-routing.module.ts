@@ -14,6 +14,7 @@ import { ReseniaCalificacionComponent } from './page/resenia-calificacion/reseni
 import { ProductoComponent } from './page/producto/producto.component';
 import { TiendaProductoComponent } from './page/tienda-producto/tienda-producto.component';
 import { TiendaComponent } from './page/tienda/tienda.component';
+import { CompradorCreaeditaComponent } from './page/comprador/comprador-creaedita/comprador-creaedita.component';
 
 
 const routes: Routes = [
@@ -58,10 +59,10 @@ const routes: Routes = [
     ]
   }, {
     path: 'comprador', component: CompradorComponent, children: [
-
+      { path: 'nuevo', component: CompradorCreaeditaComponent },
+      { path: 'edicion/:id', component: CompradorCreaeditaComponent }
     ]
-  },
-  {
+  },{
     path: 'stock', component: StockComponent, children: [
 
     ]
