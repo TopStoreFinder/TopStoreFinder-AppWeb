@@ -41,6 +41,10 @@ import { CompradorCreaeditaComponent } from './page/comprador/comprador-creaedit
 import { tiendaproductoCreaeditaComponent } from './page/tienda-producto/tiendaproducto-creaedita/tiendaproducto-creaedita.component';
 import { DuenhoCreaeditaComponent } from './page/duenho/duenho-creaedita/duenho-creaedita.component';
 import { TiendaDialogoComponent } from './page/tienda/tienda-listar/tienda-dialogo/tienda-dialogo.component';
+import { TipopagoDialogoComponent } from './page/tipo-pago/tipopago-listar/tipopago-dialogo/tipopago-dialogo.component';
+import { MatDialogModule } from '@angular/material/dialog';
+import { ProductoDialogoComponent } from './page/producto/producto-listar/producto-dialogo/producto-dialogo.component';
+import { ReseniacalificacionDialogoComponent } from './page/resenia-calificacion/reseniacalificacion-listar/reseniacalificacion-dialogo/reseniacalificacion-dialogo.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -73,7 +77,10 @@ import { TiendaDialogoComponent } from './page/tienda/tienda-listar/tienda-dialo
     CompradorCreaeditaComponent,
     tiendaproductoCreaeditaComponent,
     DuenhoCreaeditaComponent,
-    TiendaDialogoComponent
+    TiendaDialogoComponent,
+    TipopagoDialogoComponent,
+    ProductoDialogoComponent,
+    ReseniacalificacionDialogoComponent
   ],
   imports: [
     BrowserModule,
@@ -84,7 +91,8 @@ import { TiendaDialogoComponent } from './page/tienda/tienda-listar/tienda-dialo
     MatInputModule,
     MatButtonModule,
     MatIconModule,
-    FormsModule
+    FormsModule,
+    MatDialogModule
   ],
   providers: [],
   bootstrap: [AppComponent]
