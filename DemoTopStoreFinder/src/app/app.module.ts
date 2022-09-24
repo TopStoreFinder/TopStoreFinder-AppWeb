@@ -36,7 +36,7 @@ import { StockComponent } from './page/stock/stock.component';
 import { StockListarComponent } from './page/stock/stock-listar/stock-listar.component';
 import { ProductoCreaeditaComponent } from './page/producto/producto-creaedita/producto-creaedita.component';
 import { ReseniacalificacionCreaeditaComponent } from './page/resenia-calificacion/reseniacalificacion-creaedita/reseniacalificacion-creaedita.component';
-import { TiendaCreaeditaComponent } from './page/tienda/tienda-creaedita/tienda-creaedita.component';
+import { tiendaCreaeditaComponent } from './page/tienda/tienda-creaedita/tienda-creaedita.component';
 import { CompradorCreaeditaComponent } from './page/comprador/comprador-creaedita/comprador-creaedita.component';
 @NgModule({
   declarations: [
@@ -66,7 +66,7 @@ import { CompradorCreaeditaComponent } from './page/comprador/comprador-creaedit
     StockListarComponent,
     ProductoCreaeditaComponent,
     ReseniacalificacionCreaeditaComponent,
-    TiendaCreaeditaComponent
+    tiendaCreaeditaComponent,
     CompradorCreaeditaComponent
   ],
   imports: [
