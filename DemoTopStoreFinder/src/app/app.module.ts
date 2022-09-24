@@ -40,6 +40,7 @@ import { tiendaCreaeditaComponent } from './page/tienda/tienda-creaedita/tienda-
 import { CompradorCreaeditaComponent } from './page/comprador/comprador-creaedita/comprador-creaedita.component';
 import { tiendaproductoCreaeditaComponent } from './page/tienda-producto/tiendaproducto-creaedita/tiendaproducto-creaedita.component';
 import { DuenhoCreaeditaComponent } from './page/duenho/duenho-creaedita/duenho-creaedita.component';
+import { TiendaDialogoComponent } from './page/tienda/tienda-listar/tienda-dialogo/tienda-dialogo.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -71,7 +72,8 @@ import { DuenhoCreaeditaComponent } from './page/duenho/duenho-creaedita/duenho-
     tiendaCreaeditaComponent,
     CompradorCreaeditaComponent,
     tiendaproductoCreaeditaComponent,
-    DuenhoCreaeditaComponent
+    DuenhoCreaeditaComponent,
+    TiendaDialogoComponent
   ],
   imports: [
     BrowserModule,
