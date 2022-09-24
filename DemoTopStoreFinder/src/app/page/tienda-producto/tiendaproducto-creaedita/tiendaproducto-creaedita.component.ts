@@ -12,14 +12,14 @@ export class tiendaproductoCreaeditaComponent implements OnInit {
   tiendaproducto: TiendaProducto = new TiendaProducto();
   mensaje: string = "";
   edicion: boolean = false;
-  producto_id: number = 0;
+  id: number = 0;
   constructor(private TiendaProductoService: TiendaProductoService,
     private router: Router, private route: ActivatedRoute) { }
 
   ngOnInit(): void {
     this.route.params.subscribe((data: Params) => {
-      this.producto_id = data['producto_id'];
-      this.edicion = data['producto_id'] != null;
+      this.id = data['id'];
+      this.edicion = data['id'] != null;
       this.init();
     });
   }
@@ -48,7 +48,7 @@ export class tiendaproductoCreaeditaComponent implements OnInit {
 
   init() {
     if (this.edicion) {
-      this.TiendaProductoService.listarId(this.producto_id).subscribe(data => {
+      this.TiendaProductoService.listarId(this.id).subscribe(data => {
         this.tiendaproducto = data;
       })
     }

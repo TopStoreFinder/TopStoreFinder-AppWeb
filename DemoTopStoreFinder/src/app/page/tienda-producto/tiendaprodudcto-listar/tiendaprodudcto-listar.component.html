@@ -2,9 +2,9 @@
   <div class="container">
     <table mat-table [dataSource]="datasource" class="table">
 
-      <ng-container matColumnDef="producto_id">
-        <th mat-header-cell *matHeaderCellDef> producto_id. </th>
-        <td mat-cell *matCellDef="let element"> {{element.producto_id}} </td>
+      <ng-container matColumnDef="id">
+        <th mat-header-cell *matHeaderCellDef> id </th>
+        <td mat-cell *matCellDef="let element"> {{element.id}} </td>
       </ng-container>
 
 
@@ -16,7 +16,7 @@
       <ng-container matColumnDef="acciones">
         <th mat-header-cell *matHeaderCellDef> Acciones </th>
         <td mat-cell *matCellDef="let element"> <button mat-raised-button color="primary"
-            [routerLink]="['edicion', element?.producto_id]">Actualizar</button>
+            [routerLink]="['edicion', element?.id]">Actualizar</button>
         </td>
       </ng-container>
 

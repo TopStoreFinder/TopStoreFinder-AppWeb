@@ -10,7 +10,7 @@ import { Component, OnInit } from '@angular/core';
 })
 export class TiendaprodudctoListarComponent implements OnInit {
   datasource: MatTableDataSource<TiendaProducto> = new MatTableDataSource();
-  displayedColumns: string[] = ['producto_id', 'tienda_id','acciones'];
+  displayedColumns: string[] = ['id', 'tienda_id','acciones'];
   constructor(private tps: TiendaProductoService) { }
 
   ngOnInit(): void {

@@ -24,9 +24,9 @@ export class TiendaProductoService {
     return this.listaCambio.asObservable();
   }
   modificar(TiendaProducto: TiendaProducto) {
-    return this.http.put(this.url + "/" + TiendaProducto.producto_id, TiendaProducto);
+    return this.http.put(this.url + "/" + TiendaProducto.id, TiendaProducto);
   }
-  listarId(producto_id: number) {
-    return this.http.get<TiendaProducto>(`${this.url}/${producto_id}`);
+  listarId(id: number) {
+    return this.http.get<TiendaProducto>(`${this.url}/${id}`);
   }
 }

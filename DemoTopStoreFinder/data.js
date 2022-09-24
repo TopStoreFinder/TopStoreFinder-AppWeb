@@ -142,17 +142,17 @@ module.exports = function () {
     ],
     tiendaproducto: [
       {
-        producto_id: 1,
+        id: 1,
         tienda_id: 2,
 
       },
       {
-        producto_id: 2,
+        id: 2,
         tienda_id: 6,
 
       },
       {
-        producto_id: 3,
+        id: 3,
         tienda_id: 9,
 
       }
