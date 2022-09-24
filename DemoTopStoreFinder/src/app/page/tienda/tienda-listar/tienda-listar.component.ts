@@ -10,13 +10,16 @@ import { Tienda } from 'src/app/model/tienda';
 })
 export class TiendaListarComponent implements OnInit {
   datasource: MatTableDataSource<Tienda> = new MatTableDataSource();
-  displayedColumns: string[] = ['id', 'nombre','direccion','resenha','calificacion','id_duenho','id_tipo_pago'];
+  displayedColumns: string[] = ['id', 'nombre','direccion','resenha','calificacion','id_duenho','id_tipo_pago', 'acciones'];
   constructor(private tps: TiendaService) { }
 
   ngOnInit(): void {
     this.tps.listar().subscribe(data => {
       this.datasource = new MatTableDataSource(data);
     })
+    this.tps.getLista().subscribe(data => {
+      this.datasource = new MatTableDataSource(data);
+    });
   }
 
 }
