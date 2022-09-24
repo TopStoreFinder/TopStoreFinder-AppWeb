@@ -1,4 +1,3 @@
-import { Producto } from './../model/producto';
 import { TiendaProducto } from './../model/tiendaProducto';
 import { HttpClient } from '@angular/common/http'
 import { Injectable } from '@angular/core';
@@ -27,7 +26,7 @@ export class TiendaProductoService {
   modificar(TiendaProducto: TiendaProducto) {
     return this.http.put(this.url + "/" + TiendaProducto.producto_id, TiendaProducto);
   }
-  listarId(id: number) {
-    return this.http.get<TiendaProducto>(`${this.url}/${id}`);
+  listarId(producto_id: number) {
+    return this.http.get<TiendaProducto>(`${this.url}/${producto_id}`);
   }
 }
