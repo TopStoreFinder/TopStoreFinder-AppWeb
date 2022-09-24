@@ -1,6 +1,8 @@
 <body>
   <div class="container">
+    <app-tipopago-buscar></app-tipopago-buscar>
     <table mat-table [dataSource]="datasource">
+
 
       <ng-container matColumnDef="id">
         <th mat-header-cell *matHeaderCellDef> No. </th>
@@ -13,9 +15,16 @@
         <td mat-cell *matCellDef="let element"> {{element.tipo}} </td>
       </ng-container>
       <ng-container matColumnDef="acciones">
-      <th mat-header-cell *matHeaderCellDef> Acciones </th>
+      <th mat-header-cell *matHeaderCellDef> acciones </th>
       <td mat-cell *matCellDef="let element"> <button mat-raised-button color="primary"
           [routerLink]="['edicion', element?.id]">Actualizar</button>
+      </td>
+    </ng-container>
+    <ng-container matColumnDef="accion2">
+      <th mat-header-cell *matHeaderCellDef> accion2 </th>
+      <td mat-cell *matCellDef="let element">
+          <button mat-raised-button color="warn" (click)="confirmar(element.id)">Eliminar</button>
+
       </td>
     </ng-container>
 
