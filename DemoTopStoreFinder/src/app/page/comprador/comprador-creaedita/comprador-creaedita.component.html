@@ -1,0 +1,35 @@
+<p>comprador works!</p>
+<div class="container">
+
+  <h1>Comprador</h1>
+
+  <mat-form-field class="example-full-width">
+    <mat-label>Id</mat-label>
+    <input matInput placeholder="Id" [(ngModel)]="comprador.id">
+  </mat-form-field>
+
+  <br>
+
+  <mat-form-field class="example-full-width">
+    <mat-label>nombre</mat-label>
+    <input matInput required placeholder="nombre" [(ngModel)]="comprador.nombre">
+
+  </mat-form-field>
+
+  <br>
+  <mat-form-field class="example-full-width">
+    <mat-label>apellido</mat-label>
+    <input type="apellido" matInput required placeholder="apellido" [(ngModel)]="comprador.apellido">
+  </mat-form-field>
+  <br>
+  <mat-form-field class="example-full-width">
+    <mat-label>ciudad_id</mat-label>
+    <input type="ciudad_id" matInput required placeholder="ciudad_id" [(ngModel)]="comprador.ciudad_id">
+  </mat-form-field>
+  <br>
+  <br>
+  <button mat-raised-button color="primary" (click)="aceptar()">Aceptar</button>
+  <button mat-raised-button color="warn" routerLink="/comprador">Cancelar</button>
+  <p>{{mensaje}}</p>
+
+</div>
