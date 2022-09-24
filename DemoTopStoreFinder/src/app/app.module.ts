@@ -40,6 +40,10 @@ import { tiendaCreaeditaComponent } from './page/tienda/tienda-creaedita/tienda-
 import { CompradorCreaeditaComponent } from './page/comprador/comprador-creaedita/comprador-creaedita.component';
 import { tiendaproductoCreaeditaComponent } from './page/tienda-producto/tiendaproducto-creaedita/tiendaproducto-creaedita.component';
 import { DuenhoCreaeditaComponent } from './page/duenho/duenho-creaedita/duenho-creaedita.component';
+import { TipopagoDialogoComponent } from './page/tipo-pago/tipopago-listar/tipopago-dialogo/tipopago-dialogo.component';
+import { MatDialogModule } from '@angular/material/dialog';
+import { ProductoDialogoComponent } from './page/producto/producto-listar/producto-dialogo/producto-dialogo.component';
+import { ReseniacalificacionDialogoComponent } from './page/resenia-calificacion/reseniacalificacion-listar/reseniacalificacion-dialogo/reseniacalificacion-dialogo.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -71,7 +75,10 @@ import { DuenhoCreaeditaComponent } from './page/duenho/duenho-creaedita/duenho-
     tiendaCreaeditaComponent,
     CompradorCreaeditaComponent,
     tiendaproductoCreaeditaComponent,
-    DuenhoCreaeditaComponent
+    DuenhoCreaeditaComponent,
+    TipopagoDialogoComponent,
+    ProductoDialogoComponent,
+    ReseniacalificacionDialogoComponent
   ],
   imports: [
     BrowserModule,
@@ -82,7 +89,8 @@ import { DuenhoCreaeditaComponent } from './page/duenho/duenho-creaedita/duenho-
     MatInputModule,
     MatButtonModule,
     MatIconModule,
-    FormsModule
+    FormsModule,
+    MatDialogModule
   ],
   providers: [],
   bootstrap: [AppComponent]

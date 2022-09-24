@@ -9,6 +9,7 @@ import { Subject } from 'rxjs';
 export class TipoPagoService {
   url: string = "http://localhost:5000/tipopagos"
   private listaCambio = new Subject<TipoPago[]>()
+  private confirmaEliminacion = new Subject<Boolean>()
 
   constructor(private http: HttpClient) { }
 
@@ -30,5 +31,13 @@ export class TipoPagoService {
   listarId(id: number) {
     return this.http.get<TipoPago>(`${this.url}/${id}`);
   }
-
+  eliminar(id: number) {
+    return this.http.delete(this.url + "/" + id);
+  }
+  getConfirmaEliminacion() {
+    return this.confirmaEliminacion.asObservable();
+  }
+  setConfirmaEliminacion(estado: Boolean) {
+    this.confirmaEliminacion.next(estado);
+  }
 }
