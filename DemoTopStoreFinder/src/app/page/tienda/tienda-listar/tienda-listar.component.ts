@@ -14,8 +14,8 @@ export class TiendaListarComponent implements OnInit {
   constructor(private tps: TiendaService) { }
 
   ngOnInit(): void {
-    this.tps.listar().subscribe(data => {
-      this.datasource = new MatTableDataSource(data);
+    this.tps.listar().subscribe(d => {
+      this.datasource = new MatTableDataSource(d);
     })
     this.tps.getLista().subscribe(data => {
       this.datasource = new MatTableDataSource(data);

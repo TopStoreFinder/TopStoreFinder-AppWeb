@@ -9,7 +9,6 @@ import { ActivatedRoute, Params, Router } from '@angular/router';
   styleUrls: ['./tienda-creaedita.component.css']
 })
 export class tiendaCreaeditaComponent implements OnInit {
-
   tienda: Tienda = new Tienda();
   mensaje: string = "";
   edicion: boolean = false;
@@ -24,7 +23,7 @@ export class tiendaCreaeditaComponent implements OnInit {
     });
   }
   aceptar(): void {
-    if (this.tienda.nombre.length > 0 ) {
+    if (this.tienda.nombre.length > 0 && this.tienda.direccion.length > 0 && this.tienda.resenha.length > 0 && this.tienda.calificacion > 0 &&this.tienda.id_duenho > 0 &&this.tienda.id_tipo_pago > 0 ) {
       if (this.edicion) {
         this.TiendaService.modificar(this.tienda).subscribe(data => {
           this.TiendaService.listar().subscribe(data => {
