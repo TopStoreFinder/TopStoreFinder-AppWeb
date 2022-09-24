@@ -45,6 +45,7 @@ import { TipopagoDialogoComponent } from './page/tipo-pago/tipopago-listar/tipop
 import { MatDialogModule } from '@angular/material/dialog';
 import { ProductoDialogoComponent } from './page/producto/producto-listar/producto-dialogo/producto-dialogo.component';
 import { ReseniacalificacionDialogoComponent } from './page/resenia-calificacion/reseniacalificacion-listar/reseniacalificacion-dialogo/reseniacalificacion-dialogo.component';
+import { TipopagoBuscarComponent } from './page/tipo-pago/tipopago-buscar/tipopago-buscar.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -80,7 +81,8 @@ import { ReseniacalificacionDialogoComponent } from './page/resenia-calificacion
     TiendaDialogoComponent,
     TipopagoDialogoComponent,
     ProductoDialogoComponent,
-    ReseniacalificacionDialogoComponent
+    ReseniacalificacionDialogoComponent,
+    TipopagoBuscarComponent
   ],
   imports: [
     BrowserModule,
