@@ -38,6 +38,7 @@ import { ProductoCreaeditaComponent } from './page/producto/producto-creaedita/p
 import { ReseniacalificacionCreaeditaComponent } from './page/resenia-calificacion/reseniacalificacion-creaedita/reseniacalificacion-creaedita.component';
 import { tiendaCreaeditaComponent } from './page/tienda/tienda-creaedita/tienda-creaedita.component';
 import { CompradorCreaeditaComponent } from './page/comprador/comprador-creaedita/comprador-creaedita.component';
+import { tiendaproductoCreaeditaComponent } from './page/tienda-producto/tiendaproducto-creaedita/tiendaproducto-creaedita.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -67,7 +68,8 @@ import { CompradorCreaeditaComponent } from './page/comprador/comprador-creaedit
     ProductoCreaeditaComponent,
     ReseniacalificacionCreaeditaComponent,
     tiendaCreaeditaComponent,
-    CompradorCreaeditaComponent
+    CompradorCreaeditaComponent,
+    tiendaproductoCreaeditaComponent
   ],
   imports: [
     BrowserModule,

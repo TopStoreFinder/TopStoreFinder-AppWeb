@@ -1,3 +1,4 @@
+import { tiendaproductoCreaeditaComponent } from './page/tienda-producto/tiendaproducto-creaedita/tiendaproducto-creaedita.component';
 import { ReseniacalificacionCreaeditaComponent } from './page/resenia-calificacion/reseniacalificacion-creaedita/reseniacalificacion-creaedita.component';
 import { ProductoCreaeditaComponent } from './page/producto/producto-creaedita/producto-creaedita.component';
 import { StockComponent } from './page/stock/stock.component';
@@ -47,7 +48,8 @@ const routes: Routes = [
     ]
   }, {
     path: 'tiendaproducto', component: TiendaProductoComponent, children: [
-
+      {path: 'nuevo', component: tiendaproductoCreaeditaComponent},
+      { path: 'edicion/:id', component: tiendaproductoCreaeditaComponent }
     ]
   }, {
     path: 'tienda', component: TiendaComponent, children: [
