@@ -9,13 +9,16 @@ import { StockService } from 'src/app/service/stock.service';
 })
 export class StockListarComponent implements OnInit {
   datasource: MatTableDataSource<Stock> = new MatTableDataSource();
-  displayedColumns: string[] = ['id', 'enStock','LastUpdateTime'];
+  displayedColumns: string[] = ['id', 'enStock','LastUpdateTime','acciones'];
   constructor(private s: StockService) { }
 
   ngOnInit(): void {
     this.s.listar().subscribe(data => {
       this.datasource = new MatTableDataSource(data);
     })
+    this.s.getLista().subscribe(a => {
+      this.datasource = new MatTableDataSource(a);
+    });
   }
 
 }
