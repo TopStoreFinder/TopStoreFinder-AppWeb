@@ -17,6 +17,7 @@ import { TiendaProductoComponent } from './page/tienda-producto/tienda-producto.
 import { TiendaComponent } from './page/tienda/tienda.component';
 import { CompradorCreaeditaComponent } from './page/comprador/comprador-creaedita/comprador-creaedita.component';
 import { tiendaCreaeditaComponent } from './page/tienda/tienda-creaedita/tienda-creaedita.component';
+import { DuenhoCreaeditaComponent } from './page/duenho/duenho-creaedita/duenho-creaedita.component';
 
 const routes: Routes = [
   {
@@ -59,6 +60,8 @@ const routes: Routes = [
     ]
   }, {
     path: 'duenho', component: DuenhoComponent, children: [
+      {path: 'nuevo', component: DuenhoCreaeditaComponent},
+      { path: 'edicion/:id', component: DuenhoCreaeditaComponent }
 
     ]
   }, {

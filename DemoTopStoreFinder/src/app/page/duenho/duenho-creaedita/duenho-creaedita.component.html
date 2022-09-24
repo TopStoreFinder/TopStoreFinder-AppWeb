@@ -1,0 +1,37 @@
+<p>duenho works!</p>
+<div class="container">
+
+  <h1>Duenho</h1>
+
+  <mat-form-field class="example-full-width">
+    <mat-label>Id</mat-label>
+    <input matInput placeholder="Id" [(ngModel)]="duenho.id">
+  </mat-form-field>
+
+  <br>
+
+  <mat-form-field class="example-full-width">
+    <mat-label>nombre</mat-label>
+    <input matInput required placeholder="nombre" [(ngModel)]="duenho.nombre">
+
+  </mat-form-field>
+
+  <br>
+  <mat-form-field class="example-full-width">
+    <mat-label>edad</mat-label>
+    <input type="edad" matInput required placeholder="edad" [(ngModel)]="duenho.edad">
+  </mat-form-field>
+  <br>
+
+  <mat-form-field class="example-full-width">
+    <mat-label>direccion</mat-label>
+    <input type="direccion" matInput required placeholder="direccion" [(ngModel)]="duenho.direccion">
+  </mat-form-field>
+  <br>
+  <br>
+  <button mat-raised-button color="primary" (click)="aceptar()">Aceptar</button>
+  <button mat-raised-button color="warn" routerLink="/duenho">Cancelar</button>
+  <p>{{mensaje}}</p>
+
+</div>
+

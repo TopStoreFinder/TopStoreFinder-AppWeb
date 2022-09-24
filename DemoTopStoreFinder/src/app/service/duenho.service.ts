@@ -2,6 +2,7 @@ import { Duenho } from './../model/duenho';
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import {Subject} from 'rxjs';
+
 @Injectable({
   providedIn: 'root'
 })
@@ -20,5 +21,11 @@ export class DuenhoService {
   }
   getLista(){
     return this.listaCambio.asObservable();
+  }
+  modificar(duenho: Duenho) {
+    return this.http.put(this.url + "/" + duenho.id, duenho);
+  }
+  listarId(id: number) {
+    return this.http.get<Duenho>(`${this.url}/${id}`);
   }
 }

@@ -10,13 +10,16 @@ import { DuenhoService } from 'src/app/service/duenho.service';
 })
 export class DuenhoListarComponent implements OnInit {
   datasource: MatTableDataSource<Duenho> = new MatTableDataSource();
-  displayedColumns: string[] = ['id', 'nombre','edad','direccion'];
+  displayedColumns: string[] = ['id', 'nombre','edad','direccion','acciones'];
   constructor(private d: DuenhoService) { }
 
   ngOnInit(): void {
     this.d.listar().subscribe(data => {
       this.datasource = new MatTableDataSource(data);
     })
+    this.d.getLista().subscribe(a => {
+      this.datasource = new MatTableDataSource(a);
+    });
   }
 
 }
