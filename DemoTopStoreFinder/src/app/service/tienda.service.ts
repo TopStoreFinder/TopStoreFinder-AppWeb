@@ -1,7 +1,7 @@
 import { Tienda } from './../model/tienda';
 import { HttpClient } from '@angular/common/http'
 import { Injectable } from '@angular/core';
-import { Subject } from 'rxjs';
+import { Subject , EMPTY} from 'rxjs';
 @Injectable({
   providedIn: 'root'
 })
@@ -37,5 +37,12 @@ export class TiendaService {
   }
   setConfirmaEliminacion(estado: Boolean) {
     this.confirmaEliminacion.next(estado);
+  }
+  buscar(texto: string) {
+    if (texto.length != 0) {
+      return this.http.post<Tienda[]>(`${this.url}/buscar`, texto.toLowerCase(), {
+      });
+    }
+    return EMPTY;
   }
 }
