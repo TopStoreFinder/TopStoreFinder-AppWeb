@@ -50,6 +50,7 @@ import { TiendaBuscarComponent } from './page/tienda/tienda-buscar/tienda-buscar
 import { TipopagoBuscarComponent } from './page/tipo-pago/tipopago-buscar/tipopago-buscar.component';
 import { ProductoBuscarComponent } from './page/producto/producto-buscar/producto-buscar.component';
 import { CompradorDialogoComponent } from './page/comprador/comprador-dialogo/comprador-dialogo.component';
+import { DuenhoDialogoComponent } from './page/duenho/duenho-dialogo/duenho-dialogo.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -90,7 +91,8 @@ import { CompradorDialogoComponent } from './page/comprador/comprador-dialogo/co
     TiendaBuscarComponent,
     TipopagoBuscarComponent,
     ProductoBuscarComponent,
-    CompradorDialogoComponent
+    CompradorDialogoComponent,
+    DuenhoDialogoComponent
   ],
   imports: [
     BrowserModule,
