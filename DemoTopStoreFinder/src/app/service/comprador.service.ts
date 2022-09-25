@@ -1,7 +1,7 @@
 import { Comprador } from './../model/comprador';
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http'
-import { Subject } from 'rxjs';
+import { Subject ,EMPTY } from 'rxjs';
 
 @Injectable({
   providedIn: 'root'
@@ -37,5 +37,12 @@ export class CompradorService {
   }
   setConfirmaEliminacion(estado: Boolean) {
     this.confirmaEliminacion.next(estado);
+  }
+  buscar(texto: string) {
+    if (texto.length != 0) {
+      return this.http.post<Comprador[]>(`${this.url}/buscar`, texto.toLowerCase(), {
+      });
+    }
+    return EMPTY;
   }
 }

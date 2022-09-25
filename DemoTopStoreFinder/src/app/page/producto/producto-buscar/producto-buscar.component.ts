@@ -10,9 +10,7 @@ import { Component, OnInit } from '@angular/core';
 export class ProductoBuscarComponent implements OnInit {
   textoBuscar: string = ""
   constructor(private productoservice: ProductoService) { }
-
-  ngOnInit(): void {
-  }
+  ngOnInit(): void {}
   buscar(e: any) {
     let array: Producto[] = [];
     this.productoservice.listar().subscribe(data => {

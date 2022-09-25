@@ -51,6 +51,7 @@ import { TipopagoBuscarComponent } from './page/tipo-pago/tipopago-buscar/tipopa
 import { ProductoBuscarComponent } from './page/producto/producto-buscar/producto-buscar.component';
 import { CompradorDialogoComponent } from './page/comprador/comprador-dialogo/comprador-dialogo.component';
 import { DuenhoDialogoComponent } from './page/duenho/duenho-dialogo/duenho-dialogo.component';
+import { CompradorBuscarComponent } from './page/comprador/comprador-buscar/comprador-buscar.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -92,7 +93,8 @@ import { DuenhoDialogoComponent } from './page/duenho/duenho-dialogo/duenho-dial
     TipopagoBuscarComponent,
     ProductoBuscarComponent,
     CompradorDialogoComponent,
-    DuenhoDialogoComponent
+    DuenhoDialogoComponent,
+    CompradorBuscarComponent
   ],
   imports: [
     BrowserModule,
