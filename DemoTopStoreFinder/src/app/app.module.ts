@@ -49,6 +49,7 @@ import { ReseniacalificacionDialogoComponent } from './page/resenia-calificacion
 import { TiendaBuscarComponent } from './page/tienda/tienda-buscar/tienda-buscar.component';
 import { TipopagoBuscarComponent } from './page/tipo-pago/tipopago-buscar/tipopago-buscar.component';
 import { ProductoBuscarComponent } from './page/producto/producto-buscar/producto-buscar.component';
+import { CompradorDialogoComponent } from './page/comprador/comprador-dialogo/comprador-dialogo.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -88,7 +89,8 @@ import { ProductoBuscarComponent } from './page/producto/producto-buscar/product
     ReseniacalificacionDialogoComponent,
     TiendaBuscarComponent,
     TipopagoBuscarComponent,
-    ProductoBuscarComponent
+    ProductoBuscarComponent,
+    CompradorDialogoComponent
   ],
   imports: [
     BrowserModule,

@@ -31,6 +31,13 @@
                   [routerLink]="['edicion', element?.id]">Actualizar</button>
               </td>
             </ng-container>
+            <ng-container matColumnDef="accion2">
+              <th mat-header-cell *matHeaderCellDef> accion2 </th>
+              <td mat-cell *matCellDef="let element">
+                  <button mat-raised-button color="warn" (click)="confirmar(element.id)">Eliminar</button>
+      
+              </td>
+            </ng-container>
     
   
         <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
