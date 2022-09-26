@@ -53,6 +53,8 @@ import { CompradorDialogoComponent } from './page/comprador/comprador-dialogo/co
 import { DuenhoDialogoComponent } from './page/duenho/duenho-dialogo/duenho-dialogo.component';
 import { CompradorBuscarComponent } from './page/comprador/comprador-buscar/comprador-buscar.component';
 import { DuenhoBuscarComponent } from './page/duenho/duenho-buscar/duenho-buscar.component';
+import {MatToolbarModule} from '@angular/material/toolbar';
+import { NavbarComponent } from './page/navbar/navbar.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -96,7 +98,8 @@ import { DuenhoBuscarComponent } from './page/duenho/duenho-buscar/duenho-buscar
     CompradorDialogoComponent,
     DuenhoDialogoComponent,
     CompradorBuscarComponent,
-    DuenhoBuscarComponent
+    DuenhoBuscarComponent,
+    NavbarComponent
   ],
   imports: [
     BrowserModule,
@@ -108,7 +111,8 @@ import { DuenhoBuscarComponent } from './page/duenho/duenho-buscar/duenho-buscar
     MatButtonModule,
     MatIconModule,
     FormsModule,
-    MatDialogModule
+    MatDialogModule,
+    MatToolbarModule
   ],
   providers: [],
   bootstrap: [AppComponent]
