@@ -1,6 +1,9 @@
 
 <body>
   <div class="container">
+    <div style="text-align: center;">
+      <h3>LISTAR DUEÑOS</h3>
+    </div>
     <app-duenho-buscar></app-duenho-buscar>
     <table mat-table [dataSource]="datasource" class="table">
 
@@ -23,14 +26,14 @@
           <td mat-cell *matCellDef="let element"> {{element.direccion}} </td>
         </ng-container>
 
-        
+
         <ng-container matColumnDef="acciones">
           <th mat-header-cell *matHeaderCellDef> Acciones </th>
           <td mat-cell *matCellDef="let element"> <button mat-raised-button color="primary"
               [routerLink]="['edicion', element?.id]">Actualizar</button>
           </td>
         </ng-container>
-        
+
         <ng-container matColumnDef="accion2">
           <th mat-header-cell *matHeaderCellDef> accion2 </th>
           <td mat-cell *matCellDef="let element">
