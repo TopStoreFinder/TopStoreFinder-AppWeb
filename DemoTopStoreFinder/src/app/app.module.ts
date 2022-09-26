@@ -52,6 +52,7 @@ import { ProductoBuscarComponent } from './page/producto/producto-buscar/product
 import { CompradorDialogoComponent } from './page/comprador/comprador-dialogo/comprador-dialogo.component';
 import { DuenhoDialogoComponent } from './page/duenho/duenho-dialogo/duenho-dialogo.component';
 import { CompradorBuscarComponent } from './page/comprador/comprador-buscar/comprador-buscar.component';
+import { DuenhoBuscarComponent } from './page/duenho/duenho-buscar/duenho-buscar.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -94,7 +95,8 @@ import { CompradorBuscarComponent } from './page/comprador/comprador-buscar/comp
     ProductoBuscarComponent,
     CompradorDialogoComponent,
     DuenhoDialogoComponent,
-    CompradorBuscarComponent
+    CompradorBuscarComponent,
+    DuenhoBuscarComponent
   ],
   imports: [
     BrowserModule,

@@ -4,6 +4,7 @@ import { MatTableDataSource } from '@angular/material/table'
 import { ProductoService } from 'src/app/service/producto.service';
 import { MatDialog } from '@angular/material/dialog';
 import { ProductoDialogoComponent } from './producto-dialogo/producto-dialogo.component';
+
 @Component({
   selector: 'app-producto-listar',
   templateUrl: './producto-listar.component.html',
