@@ -57,6 +57,7 @@ import {MatToolbarModule} from '@angular/material/toolbar';
 import { NavbarComponent } from './page/navbar/navbar.component';
 import { TiendaproductoBuscarComponent } from './page/tienda-producto/tiendaproducto-buscar/tiendaproducto-buscar.component';
 import { TiendaproductoDialogoComponent } from './page/tienda-producto/tiendaprodudcto-listar/tiendaproducto-dialogo/tiendaproducto-dialogo.component';
+import { ReseniacalificacionBuscarComponent } from './page/resenia-calificacion/reseniacalificacion-buscar/reseniacalificacion-buscar.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -103,7 +104,8 @@ import { TiendaproductoDialogoComponent } from './page/tienda-producto/tiendapro
     DuenhoBuscarComponent,
     NavbarComponent,
     TiendaproductoBuscarComponent,
-    TiendaproductoDialogoComponent
+    TiendaproductoDialogoComponent,
+    ReseniacalificacionBuscarComponent
   ],
   imports: [
     BrowserModule,
