@@ -55,6 +55,8 @@ import { CompradorBuscarComponent } from './page/comprador/comprador-buscar/comp
 import { DuenhoBuscarComponent } from './page/duenho/duenho-buscar/duenho-buscar.component';
 import {MatToolbarModule} from '@angular/material/toolbar';
 import { NavbarComponent } from './page/navbar/navbar.component';
+import { TiendaproductoBuscarComponent } from './page/tienda-producto/tiendaproducto-buscar/tiendaproducto-buscar.component';
+import { TiendaproductoDialogoComponent } from './page/tienda-producto/tiendaprodudcto-listar/tiendaproducto-dialogo/tiendaproducto-dialogo.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -99,7 +101,9 @@ import { NavbarComponent } from './page/navbar/navbar.component';
     DuenhoDialogoComponent,
     CompradorBuscarComponent,
     DuenhoBuscarComponent,
-    NavbarComponent
+    NavbarComponent,
+    TiendaproductoBuscarComponent,
+    TiendaproductoDialogoComponent
   ],
   imports: [
     BrowserModule,

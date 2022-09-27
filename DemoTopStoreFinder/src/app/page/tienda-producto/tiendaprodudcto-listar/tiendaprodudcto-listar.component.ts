@@ -2,6 +2,8 @@ import { TiendaProductoService } from './../../../service/tienda-producto.servic
 import { TiendaProducto } from './../../../model/tiendaProducto';
 import { MatTableDataSource } from '@angular/material/table';
 import { Component, OnInit } from '@angular/core';
+import { MatDialog } from '@angular/material/dialog';
+import { TiendaproductoDialogoComponent } from './tiendaproducto-dialogo/tiendaproducto-dialogo.component';
 
 @Component({
   selector: 'app-tiendaprodudcto-listar',
@@ -10,8 +12,9 @@ import { Component, OnInit } from '@angular/core';
 })
 export class TiendaprodudctoListarComponent implements OnInit {
   datasource: MatTableDataSource<TiendaProducto> = new MatTableDataSource();
-  displayedColumns: string[] = ['id', 'tienda_id','acciones'];
-  constructor(private tps: TiendaProductoService) { }
+  private idMayor: number = 0;
+  displayedColumns: string[] = ['id', 'tienda_id','acciones','acciones2'];
+  constructor(private tps: TiendaProductoService, private dialog: MatDialog) { }
 
   ngOnInit(): void {
     this.tps.listar().subscribe(d => {
@@ -20,6 +23,23 @@ export class TiendaprodudctoListarComponent implements OnInit {
     this.tps.getLista().subscribe(data => {
       this.datasource = new MatTableDataSource(data);
     });
+    this.tps.getConfirmaEliminacion().subscribe(el => {
+      el == true ? this.eliminar(this.idMayor) : false;
+    });
+  }
+  confirmar(id: number) {
+    this.idMayor = id;
+    this.dialog.open(TiendaproductoDialogoComponent);
+  }
+
+
+  eliminar(id: number) {
+    this.tps.eliminar(id).subscribe(() => {
+      this.tps.listar().subscribe(data => {
+        this.tps.setLista(data);
+      });
+    });
+
   }
 
 }
