@@ -6,7 +6,7 @@ export class CompradorUbicacion {
   clienteid:Comprador=new Comprador;
   ubicacionid:Ubicacion=new Ubicacion;
   */
-  clienteid: number = 0;
+  id: number = 0;
   ubicacionid: number = 0;
 
 

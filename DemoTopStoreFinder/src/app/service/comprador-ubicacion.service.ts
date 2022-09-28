@@ -25,7 +25,7 @@ export class CompradorUbicacionService {
     return this.listaCambio.asObservable();
   }
   modificar(compradorubicacion: CompradorUbicacion) {
-    return this.http.put(this.url + "/" + compradorubicacion.clienteid, compradorubicacion);
+    return this.http.put(this.url + "/" + compradorubicacion.id, compradorubicacion);
   }
   listarId(id: number) {
     return this.http.get<CompradorUbicacion>(`${this.url}/${id}`);

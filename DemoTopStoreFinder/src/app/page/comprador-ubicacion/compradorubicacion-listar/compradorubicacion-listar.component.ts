@@ -12,7 +12,7 @@ import { CompradorUbicacionService } from 'src/app/service/comprador-ubicacion.s
 })
 export class CompradorubicacionListarComponent implements OnInit {
   datasource: MatTableDataSource<CompradorUbicacion> = new MatTableDataSource();
-  displayedColumns: string[] = ['clienteid', 'ubicacionid','acciones','accion2'];
+  displayedColumns: string[] = ['id', 'ubicacionid','acciones','accion2'];
   private idMayor: number = 0;
 
   constructor(private p: CompradorUbicacionService, private dialog: MatDialog) { }

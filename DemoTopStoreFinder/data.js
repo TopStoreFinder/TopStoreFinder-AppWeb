@@ -105,17 +105,17 @@ module.exports = function () {
     ],
     compradorubicacion: [
       {
-        clienteid: 1,
+        id: 1,
         ubicacionid: 5
 
       },
       {
-        clienteid: 2,
+        id: 2,
         ubicacionid: 6
 
       },
       {
-        clienteid: 3,
+        id: 3,
         ubicacionid: 9
 
       }

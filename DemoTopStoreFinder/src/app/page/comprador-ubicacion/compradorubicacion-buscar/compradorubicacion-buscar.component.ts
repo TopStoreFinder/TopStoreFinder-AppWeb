@@ -17,7 +17,7 @@ export class CompradorubicacionBuscarComponent implements OnInit {
     let array: CompradorUbicacion[] = [];
     this.compradorubicacionservice.listar().subscribe(data => {
       data.forEach((element, index) => {
-        if (element.clienteid.toString().includes(e.target.value)) {
+        if (element.id.toString().includes(e.target.value)) {
           array.push(data[index]);
         }
       });
