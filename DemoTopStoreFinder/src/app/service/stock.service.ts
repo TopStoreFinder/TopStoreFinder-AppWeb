@@ -1,13 +1,14 @@
 import {HttpClient} from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Stock } from './../model/Stock';
-import { Subject } from 'rxjs';
+import { Subject, EMPTY } from 'rxjs';
 @Injectable({
   providedIn: 'root'
 })
 export class StockService {
 url: string = "http://localhost:5000/stock"
 private listaCambio = new Subject<Stock[]>()
+private confirmaEliminacion = new Subject<Boolean>()
   constructor(private http:HttpClient) { }
   listar(){
     return this.http.get<Stock[]>(this.url);
@@ -27,5 +28,17 @@ private listaCambio = new Subject<Stock[]>()
   listarId(id: number) {
     return this.http.get<Stock>(`${this.url}/${id}`);
   }
-
+  getConfirmaEliminacion() {
+    return this.confirmaEliminacion.asObservable(); 
+  }
+  setConfirmaEliminacion(estado: Boolean) {
+    this.confirmaEliminacion.next(estado);
+  }
+  buscar(texto: string) {
+    if (texto.length != 0) {
+      return this.http.post<Stock[]>(`${this.url}/buscar`, texto.toLowerCase(), {
+      });
+    }
+    return EMPTY;
+  }
 }

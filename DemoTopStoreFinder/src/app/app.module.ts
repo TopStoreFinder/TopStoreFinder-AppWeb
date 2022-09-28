@@ -61,6 +61,11 @@ import { ReseniacalificacionBuscarComponent } from './page/resenia-calificacion/
 import { UbicacionDialogoComponent } from './page/ubicacion/ubicacion-listar/ubicacion-dialogo/ubicacion-dialogo.component';
 import { UbicacionBuscarComponent } from './page/ubicacion/ubicacion-buscar/ubicacion-buscar.component';
 import { UbicacionCreaeditaComponent } from './page/ubicacion/ubicacion-creaedita/ubicacion-creaedita.component';
+import { StockDialogoComponent } from './page/stock/stock-dialogo/stock-dialogo.component';
+import { TipoProductoCreaditaComponent } from './page/tipo-producto/tipo-producto-creadita/tipo-producto-creadita.component';
+import { TipoProductoDialogoComponent } from './page/tipo-producto/tipo-producto-dialogo/tipo-producto-dialogo.component';
+import { TipoProductoBuscarComponent } from './page/tipo-producto/tipo-producto-buscar/tipo-producto-buscar.component';
+import { StockBuscarComponent } from './page/stock/stock-buscar/stock-buscar.component';
 
 @NgModule({
   declarations: [
@@ -113,6 +118,11 @@ import { UbicacionCreaeditaComponent } from './page/ubicacion/ubicacion-creaedit
     UbicacionDialogoComponent,
     UbicacionBuscarComponent,
     UbicacionCreaeditaComponent,
+    StockDialogoComponent,
+    TipoProductoCreaditaComponent,
+    TipoProductoDialogoComponent,
+    TipoProductoBuscarComponent,
+    StockBuscarComponent,
   ],
   imports: [
     BrowserModule,

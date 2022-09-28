@@ -1,3 +1,4 @@
+import { TipoProductoCreaditaComponent } from './page/tipo-producto/tipo-producto-creadita/tipo-producto-creadita.component';
 import { tiendaproductoCreaeditaComponent } from './page/tienda-producto/tiendaproducto-creaedita/tiendaproducto-creaedita.component';
 import { ReseniacalificacionCreaeditaComponent } from './page/resenia-calificacion/reseniacalificacion-creaedita/reseniacalificacion-creaedita.component';
 import { ProductoCreaeditaComponent } from './page/producto/producto-creaedita/producto-creaedita.component';
@@ -34,7 +35,8 @@ const routes: Routes = [
     ]
   }, {
     path: 'tipoproducto', component: TipoProductoComponent, children: [
-
+      {path: 'nuevo', component: TipoProductoCreaditaComponent},
+      { path: 'edicion/:id', component: TipoProductoCreaditaComponent }
     ]
   }, {
     path: 'producto', component: ProductoComponent, children: [
