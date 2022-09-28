@@ -32,7 +32,7 @@ private confirmaEliminacion = new Subject<Boolean>()
     return this.http.delete(this.url + "/" + id);
   }
   getConfirmaEliminacion() {
-    return this.confirmaEliminacion.asObservable(); 
+    return this.confirmaEliminacion.asObservable();
   }
   setConfirmaEliminacion(estado: Boolean) {
     this.confirmaEliminacion.next(estado);

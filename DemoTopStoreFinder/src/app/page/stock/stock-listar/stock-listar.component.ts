@@ -22,6 +22,9 @@ export class StockListarComponent implements OnInit {
     this.s.getLista().subscribe(a => {
       this.datasource = new MatTableDataSource(a);
     });
+    this.s.getConfirmaEliminacion().subscribe(data => {
+      data == true ? this.eliminar(this.idMayor) : false;
+    });
   }
   confirmar(id: number) {
     this.idMayor = id;
