@@ -1,7 +1,7 @@
 import { TiendaProducto } from './../model/tiendaProducto';
 import { HttpClient } from '@angular/common/http'
 import { Injectable } from '@angular/core';
-import { Subject } from 'rxjs';
+import { Subject, EMPTY} from 'rxjs';
 
 @Injectable({
   providedIn: 'root'
@@ -9,6 +9,7 @@ import { Subject } from 'rxjs';
 export class TiendaProductoService {
   url: string = "http://localhost:5000/tiendaproducto"
   private listaCambio = new Subject<TiendaProducto[]>()
+  private confirmaEliminacion = new Subject<Boolean>()
 
   constructor(private http: HttpClient) { }
   listar() {
@@ -28,5 +29,21 @@ export class TiendaProductoService {
   }
   listarId(id: number) {
     return this.http.get<TiendaProducto>(`${this.url}/${id}`);
+  }
+  eliminar(id: number) {
+    return this.http.delete(this.url + "/" + id);
+  }
+  getConfirmaEliminacion() {
+    return this.confirmaEliminacion.asObservable();
+  }
+  setConfirmaEliminacion(estado: Boolean) {
+    this.confirmaEliminacion.next(estado);
+  }
+  buscar(texto: string) {
+    if (texto.length != 0) {
+      return this.http.post<TiendaProducto[]>(`${this.url}/buscar`, texto.toLowerCase(), {
+      });
+    }
+    return EMPTY;
   }
 }

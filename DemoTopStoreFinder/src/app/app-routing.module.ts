@@ -19,6 +19,7 @@ import { CompradorCreaeditaComponent } from './page/comprador/comprador-creaedit
 import { tiendaCreaeditaComponent } from './page/tienda/tienda-creaedita/tienda-creaedita.component';
 import { DuenhoCreaeditaComponent } from './page/duenho/duenho-creaedita/duenho-creaedita.component';
 import { StockCreaeditaComponent } from './page/stock/stock-creaedita/stock-creaedita.component';
+import { UbicacionCreaeditaComponent } from './page/ubicacion/ubicacion-creaedita/ubicacion-creaedita.component';
 
 const routes: Routes = [
   {
@@ -46,7 +47,8 @@ const routes: Routes = [
     ]
   }, {
     path: 'ubicacion', component: UbicacionComponent, children: [
-
+      {path: 'nuevo', component: UbicacionCreaeditaComponent},
+      { path: 'edicion/:id', component: UbicacionCreaeditaComponent }
     ]
   }, {
     path: 'tiendaproducto', component: TiendaProductoComponent, children: [

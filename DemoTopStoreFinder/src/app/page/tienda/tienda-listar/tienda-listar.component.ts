@@ -37,7 +37,7 @@ export class TiendaListarComponent implements OnInit {
   eliminar(id: number) {
     this.tps.eliminar(id).subscribe(() => {
       this.tps.listar().subscribe(data => {
-        this.tps.setLista(data);/* se ejecuta la línea 27*/
+        this.tps.setLista(data);
       });
     });
 

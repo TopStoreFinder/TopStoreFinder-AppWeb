@@ -55,6 +55,13 @@ import { CompradorBuscarComponent } from './page/comprador/comprador-buscar/comp
 import { DuenhoBuscarComponent } from './page/duenho/duenho-buscar/duenho-buscar.component';
 import {MatToolbarModule} from '@angular/material/toolbar';
 import { NavbarComponent } from './page/navbar/navbar.component';
+import { TiendaproductoBuscarComponent } from './page/tienda-producto/tiendaproducto-buscar/tiendaproducto-buscar.component';
+import { TiendaproductoDialogoComponent } from './page/tienda-producto/tiendaprodudcto-listar/tiendaproducto-dialogo/tiendaproducto-dialogo.component';
+import { ReseniacalificacionBuscarComponent } from './page/resenia-calificacion/reseniacalificacion-buscar/reseniacalificacion-buscar.component';
+import { UbicacionDialogoComponent } from './page/ubicacion/ubicacion-listar/ubicacion-dialogo/ubicacion-dialogo.component';
+import { UbicacionBuscarComponent } from './page/ubicacion/ubicacion-buscar/ubicacion-buscar.component';
+import { UbicacionCreaeditaComponent } from './page/ubicacion/ubicacion-creaedita/ubicacion-creaedita.component';
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -99,7 +106,13 @@ import { NavbarComponent } from './page/navbar/navbar.component';
     DuenhoDialogoComponent,
     CompradorBuscarComponent,
     DuenhoBuscarComponent,
-    NavbarComponent
+    NavbarComponent,
+    TiendaproductoBuscarComponent,
+    TiendaproductoDialogoComponent,
+    ReseniacalificacionBuscarComponent,
+    UbicacionDialogoComponent,
+    UbicacionBuscarComponent,
+    UbicacionCreaeditaComponent,
   ],
   imports: [
     BrowserModule,
