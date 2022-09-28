@@ -1,0 +1,25 @@
+
+<div class="container">
+
+    <h1>Comprador Ubicacion</h1>
+  
+    <mat-form-field class="example-full-width">
+      <mat-label>Id</mat-label>
+      <input matInput placeholder="clienteid" [(ngModel)]="compradorubicacion.clienteid">
+    </mat-form-field>
+  
+    <br>
+  
+    <mat-form-field class="example-full-width">
+      <mat-label>ubicacionid</mat-label>
+      <input matInput required placeholder="ubicacionid" [(ngModel)]="compradorubicacion.ubicacionid">
+  
+    </mat-form-field>
+  
+    
+    <br>
+    <button mat-raised-button color="primary" (click)="aceptar()">Aceptar</button>
+    <button mat-raised-button color="warn" routerLink="/compradorubicacion">Cancelar</button>
+    <p>{{mensaje}}</p>
+  
+  </div>

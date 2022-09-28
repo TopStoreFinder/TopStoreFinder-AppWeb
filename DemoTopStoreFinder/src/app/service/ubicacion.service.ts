@@ -15,8 +15,8 @@ export class UbicacionService {
   listar() {
     return this.http.get<Ubicacion[]>(this.url);
   }
-  insertar(tiopago: Ubicacion) {
-    return this.http.post(this.url, tiopago);
+  insertar(ubicacion: Ubicacion) {
+    return this.http.post(this.url, ubicacion);
   }
   setLista(listaNueva: Ubicacion[]) {
     this.listaCambio.next(listaNueva);
@@ -24,8 +24,8 @@ export class UbicacionService {
   getLista() {
     return this.listaCambio.asObservable();
   }
-  modificar(tiopago: Ubicacion) {
-    return this.http.put(this.url + "/" + tiopago.id, tiopago);
+  modificar(ubicacion: Ubicacion) {
+    return this.http.put(this.url + "/" + ubicacion.id, ubicacion);
   }
   listarId(id: number) {
     return this.http.get<Ubicacion>(`${this.url}/${id}`);
