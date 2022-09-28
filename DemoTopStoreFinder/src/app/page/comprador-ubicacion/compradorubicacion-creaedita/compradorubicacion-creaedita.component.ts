@@ -19,7 +19,7 @@ export class CompradorubicacionCreaeditaComponent implements OnInit {
     this.route.params.subscribe((data: Params) => {
       this.id = data['id'];
       this.edicion = data['id'] != null;
-      this.init;
+      this.init();
     });
   }
 
