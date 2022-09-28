@@ -1,7 +1,9 @@
+import { StockDialogoComponent } from './../stock-dialogo/stock-dialogo.component';
 import { Component, OnInit } from '@angular/core';
 import { MatTableDataSource } from '@angular/material/table';
 import { Stock } from 'src/app/model/Stock';
 import { StockService } from 'src/app/service/stock.service';
+import { MatDialog } from '@angular/material/dialog';
 @Component({
   selector: 'app-stock-listar',
   templateUrl: './stock-listar.component.html',
@@ -9,8 +11,9 @@ import { StockService } from 'src/app/service/stock.service';
 })
 export class StockListarComponent implements OnInit {
   datasource: MatTableDataSource<Stock> = new MatTableDataSource();
-  displayedColumns: string[] = ['id', 'enStock','LastUpdateTime','acciones'];
-  constructor(private s: StockService) { }
+  private idMayor: number = 0;
+  displayedColumns: string[] = ['id', 'enStock','LastUpdateTime','acciones','acciones2'];
+  constructor(private s: StockService,private dialog: MatDialog) { }
 
   ngOnInit(): void {
     this.s.listar().subscribe(data => {
@@ -20,5 +23,16 @@ export class StockListarComponent implements OnInit {
       this.datasource = new MatTableDataSource(a);
     });
   }
+  confirmar(id: number) {
+    this.idMayor = id;
+    this.dialog.open(StockDialogoComponent);
+  }
+  eliminar(id: number) {
+    this.s.eliminar(id).subscribe(() => {
+      this.s.listar().subscribe(data => {
+        this.s.setLista(data);
+      });
+    });
 
+  }
 }

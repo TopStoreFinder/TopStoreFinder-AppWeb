@@ -28,6 +28,9 @@ private confirmaEliminacion = new Subject<Boolean>()
   listarId(id: number) {
     return this.http.get<Stock>(`${this.url}/${id}`);
   }
+  eliminar(id: number) {
+    return this.http.delete(this.url + "/" + id);
+  }
   getConfirmaEliminacion() {
     return this.confirmaEliminacion.asObservable(); 
   }
