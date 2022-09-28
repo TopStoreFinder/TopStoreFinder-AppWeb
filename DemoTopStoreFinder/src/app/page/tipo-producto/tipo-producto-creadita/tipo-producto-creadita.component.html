@@ -1,0 +1,21 @@
+<p>tipo-producto-creadita works!</p>
+<div class="container">
+    <h1>TipoProducto</h1>
+    <mat-form-field class="example-full-width">
+        <mat-label>Id</mat-label>
+        <input matInput placeholder="Id" [(ngModel)]="TipoProducto.id">
+      </mat-form-field>
+      <br>
+
+      <mat-form-field class="example-full-width">
+        <mat-label>categoriaNombre</mat-label>
+        <input matInput required placeholder="categoriaNombre" [(ngModel)]="TipoProducto.categoriaNombre">
+
+      </mat-form-field>
+
+      <br>
+  <br>
+  <button mat-raised-button color="primary" (click)="aceptar()">Aceptar</button>
+  <button mat-raised-button color="warn" routerLink="/tipoproducto">Cancelar</button>
+  <p>{{mensaje}}</p>
+</div>
