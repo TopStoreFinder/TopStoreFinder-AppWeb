@@ -6,5 +6,6 @@ export class TiendaProducto {
   */
   id: number = 0;
   tienda_id: number = 0;
+  productoid: number = 0;
 
 }
