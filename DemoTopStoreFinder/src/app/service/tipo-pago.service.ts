@@ -2,12 +2,13 @@ import { HttpClient } from '@angular/common/http'
 import { TipoPago } from '../model/tipoPago';
 import { Injectable } from '@angular/core';
 import { Subject , EMPTY} from 'rxjs';
+import { environment } from 'src/environments/environment';
 
 @Injectable({
   providedIn: 'root'
 })
 export class TipoPagoService {
-  url: string = "http://localhost:5000/tipopagos"
+  url: string = `${environment.host}/tipopago`
   private listaCambio = new Subject<TipoPago[]>()
   private confirmaEliminacion = new Subject<Boolean>()
 
@@ -32,7 +33,7 @@ export class TipoPagoService {
     return this.http.get<TipoPago>(`${this.url}/${id}`);
   }
   eliminar(id: number) {
-    return this.http.delete(this.url + "/" + id);
+    return this.http.delete(`${this.url}/${id}`);
   }
   getConfirmaEliminacion() {
     return this.confirmaEliminacion.asObservable();
