@@ -2,7 +2,7 @@ import { Duenho } from './../../../model/duenho';
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, Params, Router } from '@angular/router';
 import {DuenhoService} from 'src/app/service/duenho.service';
- 
+
 
 @Component({
   selector: 'app-duenho-creaedita',
@@ -40,7 +40,7 @@ export class DuenhoCreaeditaComponent implements OnInit {
           })
         })
       }
-      this.router.navigate(['comprador']);
+      this.router.navigate(['duenho']);
     } else {
       this.mensaje = "Complete los valores requeridos";
     }

@@ -1,3 +1,4 @@
+import { environment } from './../../environments/environment';
 import { Duenho } from './../model/duenho';
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
@@ -7,7 +8,7 @@ import {Subject , EMPTY } from 'rxjs';
   providedIn: 'root'
 })
 export class DuenhoService {
-  url: string = "http://localhost:5000/duenho"
+  url: string = `${environment.host}/duenho`
   private listaCambio = new Subject<Duenho[]>()
   private confirmaEliminacion = new Subject<Boolean>()
   constructor(private http: HttpClient) { }
@@ -46,4 +47,3 @@ export class DuenhoService {
     return EMPTY;
   }
 }
- 

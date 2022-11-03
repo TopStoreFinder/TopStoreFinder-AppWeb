@@ -1,3 +1,4 @@
+import { environment } from './../../environments/environment';
 import { Tienda } from './../model/tienda';
 import { HttpClient } from '@angular/common/http'
 import { Injectable } from '@angular/core';
@@ -6,7 +7,7 @@ import { Subject , EMPTY} from 'rxjs';
   providedIn: 'root'
 })
 export class TiendaService {
-  url: string = "http://localhost:5000/Tienda"
+  url: string = `${environment.host}/tienda`
   private listaCambio = new Subject<Tienda[]>()
   private confirmaEliminacion = new Subject<Boolean>()
 
