@@ -13,7 +13,7 @@ import {TiendaDialogoComponent} from './tienda-dialogo/tienda-dialogo.component'
 export class TiendaListarComponent implements OnInit {
   datasource: MatTableDataSource<Tienda> = new MatTableDataSource();
   private idMayor: number = 0;
-  displayedColumns: string[] = ['id', 'nombre','direccion','resenha','calificacion','id_duenho','id_tipo_pago', 'acciones', 'acciones2'];
+  displayedColumns: string[] = ['id', 'nombre','direccion','id_duenho','id_tipo_pago', 'acciones', 'acciones2'];
   constructor(private tps: TiendaService, private dialog: MatDialog) { }
 
   ngOnInit(): void {
