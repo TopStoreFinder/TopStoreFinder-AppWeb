@@ -26,35 +26,25 @@
 
   <br>
 
-  <mat-form-field class="example-full-width">
-    <mat-label>Resenha</mat-label>
-    <input type="resenha" matInput required placeholder="resenha" [(ngModel)]="tienda.resenha">
 
-  </mat-form-field>
 
-  <br>
-
-  <mat-form-field class="example-full-width">
-    <mat-label>Calificacion</mat-label>
-    <input type="calificacion" matInput required placeholder="calificacion" [(ngModel)]="tienda.calificacion">
-
-  </mat-form-field>
-
-  <br>
-
-  <mat-form-field class="example-full-width">
-    <mat-label>Id_duenho</mat-label>
-    <input type="id_duenho" matInput required placeholder="id_duenho" [(ngModel)]="tienda.id_duenho">
-
-  </mat-form-field>
-
-  <br>
-
-  <mat-form-field class="example-full-width">
-    <mat-label>Id_tipo_pago</mat-label>
-    <input type="id_tipo_pago" matInput required placeholder="id_tipo_pago" [(ngModel)]="tienda.id_tipo_pago">
-
-  </mat-form-field>
+  <mat-form-field appearance="fill">
+    <mat-label>Seleccione Dueño</mat-label>
+    <mat-select [(value)]="idDuenhoSeleccionado" required>
+        <mat-option *ngFor="let p of listaDuenho" [value]="p.id">
+            {{p.nombre}}
+        </mat-option>
+    </mat-select>
+</mat-form-field>
+<br>
+<mat-form-field appearance="fill">
+  <mat-label>Seleccione Tipo Pago</mat-label>
+  <mat-select [(value)]="idTipoPagoSeleccionado" required>
+      <mat-option *ngFor="let p of listaTipoPago" [value]="p.id">
+          {{p.tipo}}
+      </mat-option>
+  </mat-select>
+</mat-form-field>
 
   <br>
 

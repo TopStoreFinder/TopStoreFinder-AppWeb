@@ -69,6 +69,7 @@ import { TipoProductoCreaditaComponent } from './page/tipo-producto/tipo-product
 import { TipoProductoDialogoComponent } from './page/tipo-producto/tipo-producto-dialogo/tipo-producto-dialogo.component';
 import { TipoProductoBuscarComponent } from './page/tipo-producto/tipo-producto-buscar/tipo-producto-buscar.component';
 import { StockBuscarComponent } from './page/stock/stock-buscar/stock-buscar.component';
+import { MatSelectModule } from '@angular/material/select';
 
 
 @NgModule({
@@ -142,7 +143,8 @@ import { StockBuscarComponent } from './page/stock/stock-buscar/stock-buscar.com
     MatIconModule,
     FormsModule,
     MatDialogModule,
-    MatToolbarModule
+    MatToolbarModule,
+    MatSelectModule
   ],
   providers: [],
   bootstrap: [AppComponent]

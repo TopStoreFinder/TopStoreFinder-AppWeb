@@ -25,7 +25,7 @@ export class TiendaService {
     return this.listaCambio.asObservable();
   }
   modificar(Tienda: Tienda) {
-    return this.http.put(this.url + "/" + Tienda.id, Tienda);
+    return this.http.put(this.url,Tienda);
   }
   listarId(id: number) {
     return this.http.get<Tienda>(`${this.url}/${id}`);

@@ -1,7 +1,11 @@
+import { TipoPago } from './../../../model/tipoPago';
+import { Duenho } from './../../../model/duenho';
 import { TiendaService } from 'src/app/service/tienda.service';
 import { Tienda } from 'src/app/model/tienda';
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, Params, Router } from '@angular/router';
+import { DuenhoService } from 'src/app/service/duenho.service';
+import { TipoPagoService } from 'src/app/service/tipo-pago.service';
 
 @Component({
   selector: 'app-tienda-creaedita',
@@ -13,8 +17,13 @@ export class tiendaCreaeditaComponent implements OnInit {
   mensaje: string = "";
   edicion: boolean = false;
   id: number = 0;
+  idDuenhoSeleccionado:number =0;
+  idTipoPagoSeleccionado:number =0;
+
+  listaDuenho: Duenho[]=[];
+  listaTipoPago: TipoPago[]=[];
   constructor(private TiendaService: TiendaService,
-    private router: Router, private route: ActivatedRoute) { }
+    private router: Router, private route: ActivatedRoute, private duenhoService:DuenhoService,private tipopagoService: TipoPagoService) { }
 
   ngOnInit(): void {
     this.route.params.subscribe((data: Params) => {
@@ -22,9 +31,21 @@ export class tiendaCreaeditaComponent implements OnInit {
       this.edicion = data['id'] != null;
       this.init();
     });
+    this.duenhoService.listar().subscribe(data =>{this.listaDuenho = data});
+    this.tipopagoService.listar().subscribe(data =>{this.listaTipoPago = data});
+
   }
   aceptar(): void {
-    if (this.tienda.nombre.length > 0 && this.tienda.direccion.length > 0 && this.tienda.resenha.length > 0 && this.tienda.calificacion > 0 && this.tienda.id_duenho.id > 0 && this.tienda.id_tipo_pago.id > 0 ) {
+    if (this.tienda.nombre.length > 0 && this.tienda.direccion.length > 0 && this.idDuenhoSeleccionado>0 && this.idTipoPagoSeleccionado>0 ) {
+      let p = new Duenho();
+      p.id = this.idDuenhoSeleccionado;
+      this.tienda.id_duenho = p;
+
+      let a = new TipoPago();
+      a.id = this.idTipoPagoSeleccionado;
+      this.tienda.id_tipo_pago = a;
+
+
       if (this.edicion) {
         this.TiendaService.modificar(this.tienda).subscribe(data => {
           this.TiendaService.listar().subscribe(data => {
@@ -50,6 +71,8 @@ export class tiendaCreaeditaComponent implements OnInit {
     if (this.edicion) {
       this.TiendaService.listarId(this.id).subscribe(data => {
         this.tienda = data;
+        this.idDuenhoSeleccionado = data.id_duenho.id;
+        this.idTipoPagoSeleccionado = data.id_tipo_pago.id;
       })
     }
 
