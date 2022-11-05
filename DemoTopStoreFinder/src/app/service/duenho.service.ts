@@ -25,7 +25,7 @@ export class DuenhoService {
     return this.listaCambio.asObservable();
   }
   modificar(duenho: Duenho) {
-    return this.http.put(this.url + "/" + duenho.id, duenho);
+    return this.http.put(this.url,duenho);
   }
   listarId(id: number) {
     return this.http.get<Duenho>(`${this.url}/${id}`);
