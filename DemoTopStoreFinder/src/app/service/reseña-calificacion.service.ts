@@ -1,4 +1,5 @@
 import { HttpClient } from '@angular/common/http';
+import { environment } from './../../environments/environment';
 import { Injectable } from '@angular/core';
 import { reseCalificacion } from '../model/reseñaCalificacion';
 import { Subject, EMPTY } from 'rxjs';
@@ -7,7 +8,7 @@ import { Subject, EMPTY } from 'rxjs';
   providedIn: 'root'
 })
 export class ReseñaCalificacionService {
-  url: string = "http://localhost:5000/reseniacalificacion"
+  url: string = `${environment.host}/reseña-calificacion`
   private listaCambio = new Subject<reseCalificacion[]>()
   private confirmaEliminacion = new Subject<Boolean>()
   constructor(private http: HttpClient) { }

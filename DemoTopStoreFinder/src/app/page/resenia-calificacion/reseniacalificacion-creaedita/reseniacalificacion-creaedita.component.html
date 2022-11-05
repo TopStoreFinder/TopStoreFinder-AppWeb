@@ -22,19 +22,26 @@
 
   </mat-form-field>
 
+   
+  <mat-form-field appearance="fill">
+    <mat-label>Seleccione Cliente</mat-label>
+    <mat-select [(value)]="idClienteSeleccionado" required>
+        <mat-option *ngFor="let p of listaCliente" [value]="p.id">
+            {{p.nombre}}
+        </mat-option>
+    </mat-select>
+</mat-form-field>
+<br>
+<mat-form-field appearance="fill">
+  <mat-label>Seleccione Tienda</mat-label>
+  <mat-select [(value)]="idTiendaSeleccionada" required>
+      <mat-option *ngFor="let p of listaTienda" [value]="p.id">
+          {{p.nombre}}
+      </mat-option>
+  </mat-select>
+</mat-form-field>
+
   <br>
-  <mat-form-field class="example-full-width">
-    <mat-label>Cliente_id</mat-label>
-    <input matInput required placeholder="Cliente_id" [(ngModel)]="reseniacalifi.Cliente_id">
-
-  </mat-form-field>
-
-  <br>
-  <mat-form-field class="example-full-width">
-    <mat-label>Tienda_id</mat-label>
-    <input matInput required placeholder="Tienda_id" [(ngModel)]="reseniacalifi.Tienda_id">
-
-  </mat-form-field>
 
   <br>
   <button mat-raised-button color="primary" (click)="aceptar()">Aceptar</button>
