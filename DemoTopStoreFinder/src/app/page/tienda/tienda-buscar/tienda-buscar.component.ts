@@ -14,15 +14,9 @@ export class TiendaBuscarComponent implements OnInit {
   ngOnInit(): void {
   }
   buscar(e: any) {
-    let array: Tienda[] = [];
-    this.TiendaService.listar().subscribe(data => {
-      data.forEach((element, index) => {
-        if (element.nombre.includes(e.target.value)) {
-          array.push(data[index]);
-        }
-      });
-      this.TiendaService.setLista(array);
-    })
+    this.TiendaService.buscar(e.target.value).subscribe(data=>{
+      this.TiendaService.setLista(data);
+    });
   }
 
 }
