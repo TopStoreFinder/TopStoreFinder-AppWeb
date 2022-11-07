@@ -14,6 +14,10 @@ export class TipoPagoService {
 
   constructor(private http: HttpClient) { }
 
+  getCount(){
+    return this.http.get<TipoPago[]>(this.url);
+  }
+
   listar() {
     return this.http.get<TipoPago[]>(this.url);
   }
