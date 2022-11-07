@@ -12,6 +12,9 @@ export class TiendaService {
   private confirmaEliminacion = new Subject<Boolean>()
 
   constructor(private http: HttpClient) { }
+  getCount(){
+    return this.http.get<Tienda[]>(this.url);
+  }
   listar() {
     return this.http.get<Tienda[]>(this.url);
   }

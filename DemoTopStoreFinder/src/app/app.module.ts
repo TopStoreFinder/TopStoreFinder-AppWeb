@@ -70,7 +70,8 @@ import { TipoProductoDialogoComponent } from './page/tipo-producto/tipo-producto
 import { TipoProductoBuscarComponent } from './page/tipo-producto/tipo-producto-buscar/tipo-producto-buscar.component';
 import { StockBuscarComponent } from './page/stock/stock-buscar/stock-buscar.component';
 import { MatSelectModule } from '@angular/material/select';
-
+import { HomeComponent } from './page/home/home/home.component';
+import {MatCardModule} from '@angular/material/card';
 
 @NgModule({
   declarations: [
@@ -131,6 +132,7 @@ import { MatSelectModule } from '@angular/material/select';
     TipoProductoDialogoComponent,
     TipoProductoBuscarComponent,
     StockBuscarComponent,
+    HomeComponent,
   ],
   imports: [
     BrowserModule,
@@ -144,7 +146,8 @@ import { MatSelectModule } from '@angular/material/select';
     FormsModule,
     MatDialogModule,
     MatToolbarModule,
-    MatSelectModule
+    MatSelectModule,
+    MatCardModule
   ],
   providers: [],
   bootstrap: [AppComponent]

@@ -23,9 +23,14 @@ import { tiendaCreaeditaComponent } from './page/tienda/tienda-creaedita/tienda-
 import { DuenhoCreaeditaComponent } from './page/duenho/duenho-creaedita/duenho-creaedita.component';
 import { StockCreaeditaComponent } from './page/stock/stock-creaedita/stock-creaedita.component';
 import { UbicacionCreaeditaComponent } from './page/ubicacion/ubicacion-creaedita/ubicacion-creaedita.component';
+import { HomeComponent } from './page/home/home/home.component';
 
 const routes: Routes = [
   {
+    path: 'home', component: HomeComponent, children: [
+
+    ]
+  },{
     path: 'tipopago', component: TipoPagoComponent, children: [
       {path: 'nuevo', component: TipopagoCreaeditaComponent},
       { path: 'edicion/:id', component: TipopagoCreaeditaComponent }

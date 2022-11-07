@@ -12,6 +12,10 @@ export class DuenhoService {
   private listaCambio = new Subject<Duenho[]>()
   private confirmaEliminacion = new Subject<Boolean>()
   constructor(private http: HttpClient) { }
+
+  getCount(){
+    return this.http.get<Duenho[]>(this.url);
+  }
   listar() {
     return this.http.get<Duenho[]>(this.url);
   }
