@@ -1,3 +1,4 @@
+import { MatSidenavModule } from '@angular/material/sidenav';
 
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
@@ -72,6 +73,8 @@ import { StockBuscarComponent } from './page/stock/stock-buscar/stock-buscar.com
 import { MatSelectModule } from '@angular/material/select';
 import { HomeComponent } from './page/home/home/home.component';
 import {MatCardModule} from '@angular/material/card';
+import { MatListModule } from '@angular/material/list';
+
 
 @NgModule({
   declarations: [
@@ -147,7 +150,9 @@ import {MatCardModule} from '@angular/material/card';
     MatDialogModule,
     MatToolbarModule,
     MatSelectModule,
-    MatCardModule
+    MatCardModule,
+    MatSidenavModule,
+    MatListModule
   ],
   providers: [],
   bootstrap: [AppComponent]
