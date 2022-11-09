@@ -1,3 +1,4 @@
+import { environment } from './../../environments/environment';
 import { TiendaProducto } from './../model/tiendaProducto';
 import { HttpClient } from '@angular/common/http'
 import { Injectable } from '@angular/core';
@@ -7,11 +8,14 @@ import { Subject, EMPTY} from 'rxjs';
   providedIn: 'root'
 })
 export class TiendaProductoService {
-  url: string = "http://localhost:5000/tiendaproducto"
+  url: string = `${environment.host}/tiendaproducto`
   private listaCambio = new Subject<TiendaProducto[]>()
   private confirmaEliminacion = new Subject<Boolean>()
 
   constructor(private http: HttpClient) { }
+  getCount(){
+    return this.http.get<TiendaProducto[]>(this.url);
+  }
   listar() {
     return this.http.get<TiendaProducto[]>(this.url);
   }
@@ -25,7 +29,7 @@ export class TiendaProductoService {
     return this.listaCambio.asObservable();
   }
   modificar(TiendaProducto: TiendaProducto) {
-    return this.http.put(this.url + "/" + TiendaProducto.id, TiendaProducto);
+    return this.http.put(this.url,TiendaProducto);
   }
   listarId(id: number) {
     return this.http.get<TiendaProducto>(`${this.url}/${id}`);
