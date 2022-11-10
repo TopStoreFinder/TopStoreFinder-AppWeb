@@ -36,7 +36,7 @@
   <br>
 
   <mat-form-field appearance="fill">
-    <mat-label>Seleccione Dueño</mat-label>
+    <mat-label>Seleccione el Tipo de producto</mat-label>
     <mat-select [(value)]="idTipoProductoSeleccionado" required>
         <mat-option *ngFor="let p of listaTipoProducto" [value]="p.id">
             {{p.categoriaNombre}}
@@ -45,7 +45,7 @@
 </mat-form-field>
 <br>
 <mat-form-field appearance="fill">
-  <mat-label>Seleccione Tipo Pago</mat-label>
+  <mat-label>Seleccione el Stock</mat-label>
   <mat-select [(value)]="idStockSeleccionado" required>
       <mat-option *ngFor="let p of listaStock" [value]="p.id">
           {{p.enStock}}
