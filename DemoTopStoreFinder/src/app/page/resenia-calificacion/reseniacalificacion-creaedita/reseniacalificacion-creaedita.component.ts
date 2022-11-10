@@ -32,6 +32,9 @@ export class ReseniacalificacionCreaeditaComponent implements OnInit {
       this.edicion = data['id'] != null;
       this.init();
     });
+
+    this.compradorService.listar().subscribe( data=>{this.listaCliente = data});
+    this.tiendaService.listar().subscribe(data => {this.listaTienda = data});
   }
 
   aceptar(): void {

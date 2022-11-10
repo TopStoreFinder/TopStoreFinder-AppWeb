@@ -8,7 +8,7 @@ import { Subject, EMPTY } from 'rxjs';
   providedIn: 'root'
 })
 export class ReseñaCalificacionService {
-  url: string = `${environment.host}/reseña-calificacion`
+  url: string = `https://app-topstorefinder.herokuapp.com/reseniacalificacion`
   private listaCambio = new Subject<reseCalificacion[]>()
   private confirmaEliminacion = new Subject<Boolean>()
   constructor(private http: HttpClient) { }
@@ -26,7 +26,7 @@ export class ReseñaCalificacionService {
     return this.listaCambio.asObservable();
   }
   modificar(rese: reseCalificacion) {
-    return this.http.put(this.url + "/" + rese.id, rese);
+    return this.http.put(this.url, rese);
   }
   listarId(id: number) {
     return this.http.get<reseCalificacion>(`${this.url}/${id}`);

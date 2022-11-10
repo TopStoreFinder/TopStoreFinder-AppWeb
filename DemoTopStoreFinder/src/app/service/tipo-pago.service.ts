@@ -8,7 +8,7 @@ import { environment } from 'src/environments/environment';
   providedIn: 'root'
 })
 export class TipoPagoService {
-  url: string = `${environment.host}/tipopago`
+  url: string = `https://app-topstorefinder.herokuapp.com/tipopago`
   private listaCambio = new Subject<TipoPago[]>()
   private confirmaEliminacion = new Subject<Boolean>()
 
@@ -31,7 +31,7 @@ export class TipoPagoService {
     return this.listaCambio.asObservable();
   }
   modificar(tiopago: TipoPago) {
-    return this.http.put(this.url + "/" + tiopago.id, tiopago);
+    return this.http.put(this.url, tiopago);
   }
   listarId(id: number) {
     return this.http.get<TipoPago>(`${this.url}/${id}`);
