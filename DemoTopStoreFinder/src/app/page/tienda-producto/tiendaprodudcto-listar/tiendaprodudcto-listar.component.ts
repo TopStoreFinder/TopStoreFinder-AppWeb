@@ -41,5 +41,8 @@ export class TiendaprodudctoListarComponent implements OnInit {
     });
 
   }
+  filtrar(e: any) {
+    this.datasource.filter = e.target.value.trim();
+  }
 
 }

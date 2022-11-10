@@ -4,17 +4,32 @@
   <h1>Tienda Producto</h1>
 
   <mat-form-field class="example-full-width">
-    <mat-label>producto_id</mat-label>
-    <input matInput placeholder="producto_id" [(ngModel)]="tiendaproducto.id">
+    <mat-label>Id</mat-label>
+    <input matInput placeholder="Id" [(ngModel)]="tiendaproducto.id">
   </mat-form-field>
 
   <br>
 
-  <mat-form-field class="example-full-width">
-    <mat-label>tienda_id</mat-label>
-    <input type="tienda_id" matInput required placeholder="tienda_id" [(ngModel)]="tiendaproducto.tienda_id">
+   <mat-form-field appearance="fill">
+    <mat-label>Seleccione la tienda</mat-label>
+    <mat-select [(value)]="idTiendaSeleccionado" required>
+        <mat-option *ngFor="let p of listaTienda" [value]="p.id">
+            {{p.nombre}}
+        </mat-option>
+    </mat-select>
+</mat-form-field>
+<br>
+<mat-form-field appearance="fill">
+  <mat-label>Seleccione el producto</mat-label>
+  <mat-select [(value)]="idProductoSeleccionado" required>
+      <mat-option *ngFor="let p of listaProducto" [value]="p.id">
+          {{p.nombreProducto}}
+      </mat-option>
+  </mat-select>
+</mat-form-field>
 
-  </mat-form-field>
+  <br>
+
 
   <br>
 

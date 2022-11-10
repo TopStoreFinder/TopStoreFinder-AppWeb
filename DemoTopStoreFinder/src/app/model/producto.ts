@@ -6,10 +6,9 @@ export class Producto {
   nombreProducto: string = "";
   productoDescripcion: string = "";
   cantidad: number = 0;
-  //cantidad: Stock = new Stock();
   precioUnidad: number = 0;
-  //categoriaProdcuto: TipoProducto = new TipoProducto();
-  categoriaProdcuto: number = 0;
+  categoriaProdcuto: TipoProducto = new TipoProducto();
+  id_Stock: Stock = new Stock();
 
 
 }

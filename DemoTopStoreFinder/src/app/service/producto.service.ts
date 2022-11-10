@@ -1,16 +1,20 @@
+import { Producto } from './../model/producto';
 import { HttpClient } from '@angular/common/http'
 import { Injectable } from '@angular/core';
-import { Producto } from '../model/producto';
 import { Subject , EMPTY } from 'rxjs';
-
+import { environment } from './../../environments/environment';
 @Injectable({
   providedIn: 'root'
 })
 export class ProductoService {
-  url: string = "http://localhost:5000/producto"
+  url: string = `${environment.host}/producto`
   private listaCambio = new Subject<Producto[]>()
   private confirmaEliminacion = new Subject<Boolean>()
+
   constructor(private http: HttpClient) { }
+  getCount(){
+    return this.http.get<Producto[]>(this.url);
+  }
   listar() {
     return this.http.get<Producto[]>(this.url);
   }
@@ -23,8 +27,8 @@ export class ProductoService {
   getLista() {
     return this.listaCambio.asObservable();
   }
-  modificar(propietario: Producto) {
-    return this.http.put(this.url + "/" + propietario.id, propietario);
+  modificar(producto: Producto) {
+   return this.http.put(this.url,producto);
   }
   listarId(id: number) {
     return this.http.get<Producto>(`${this.url}/${id}`);
