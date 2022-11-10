@@ -8,7 +8,7 @@ import { environment } from 'src/environments/environment';
   providedIn: 'root'
 })
 export class TipoPagoService {
-  url: string = `${environment.host}/tipopago`
+  url: string = `https://app-topstorefinder.herokuapp.com/tipopago`
   private listaCambio = new Subject<TipoPago[]>()
   private confirmaEliminacion = new Subject<Boolean>()
 

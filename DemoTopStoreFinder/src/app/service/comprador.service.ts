@@ -8,13 +8,13 @@ import { environment } from './../../environments/environment';
   providedIn: 'root'
 })
 export class CompradorService {
-  url:  string = `${environment.host}/comprador`
+  url:  string = `https://app-topstorefinder.herokuapp.com/comprador`
   private listaCambio = new Subject<Comprador[]>()
   private confirmaEliminacion = new Subject<Boolean>()
   constructor(private http: HttpClient) { }
   listar() {
     return this.http.get<Comprador[]>(this.url);
-  } 
+  }
   insertar(comprador: Comprador) {
     return this.http.post(this.url,comprador);
   }
