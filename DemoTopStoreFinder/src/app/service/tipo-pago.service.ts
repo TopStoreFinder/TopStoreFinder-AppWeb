@@ -31,7 +31,7 @@ export class TipoPagoService {
     return this.listaCambio.asObservable();
   }
   modificar(tiopago: TipoPago) {
-    return this.http.put(this.url + "/" + tiopago.id, tiopago);
+    return this.http.put(this.url, tiopago);
   }
   listarId(id: number) {
     return this.http.get<TipoPago>(`${this.url}/${id}`);

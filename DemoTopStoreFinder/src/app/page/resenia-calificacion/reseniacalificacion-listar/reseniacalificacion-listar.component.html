@@ -17,17 +17,17 @@
       </ng-container>
 
       <ng-container matColumnDef="Resenia">
-        <th mat-header-cell *matHeaderCellDef> Reseña </th>
+        <th mat-header-cell *matHeaderCellDef> Resenia </th>
         <td mat-cell *matCellDef="let element"> {{element.Resenia}} </td>
       </ng-container>
 
       <ng-container matColumnDef="Cliente_id">
         <th mat-header-cell *matHeaderCellDef> Cliente_id </th>
-        <td mat-cell *matCellDef="let element"> {{element.Cliente_id.id}} </td>
+        <td mat-cell *matCellDef="let element"> {{element.Cliente_id.nombre}} </td>
       </ng-container>
       <ng-container matColumnDef="Tienda_id">
         <th mat-header-cell *matHeaderCellDef> Tienda_id </th>
-        <td mat-cell *matCellDef="let element"> {{element.Tienda_id.id}} </td>
+        <td mat-cell *matCellDef="let element"> {{element.Tienda_id.nombre}} </td>
       </ng-container>
       <ng-container matColumnDef="acciones">
         <th mat-header-cell *matHeaderCellDef> Acciones </th>
