@@ -31,11 +31,30 @@
     <mat-label>precioUnidad</mat-label>
     <input type="precioUnidad" matInput required placeholder="precioUnidad" [(ngModel)]="producto.precioUnidad">
   </mat-form-field>
+
+
   <br>
-  <mat-form-field class="example-full-width">
-    <mat-label>categoriaProdcuto</mat-label>
-    <input type="categoriaProdcuto" matInput required placeholder="categoriaProdcuto" [(ngModel)]="producto.categoriaProdcuto">
-  </mat-form-field>
+
+  <mat-form-field appearance="fill">
+    <mat-label>Seleccione Dueño</mat-label>
+    <mat-select [(value)]="idTipoProductoSeleccionado" required>
+        <mat-option *ngFor="let p of listaTipoProducto" [value]="p.id">
+            {{p.categoriaNombre}}
+        </mat-option>
+    </mat-select>
+</mat-form-field>
+<br>
+<mat-form-field appearance="fill">
+  <mat-label>Seleccione Tipo Pago</mat-label>
+  <mat-select [(value)]="idStockSeleccionado" required>
+      <mat-option *ngFor="let p of listaStock" [value]="p.id">
+          {{p.enStock}}
+      </mat-option>
+  </mat-select>
+</mat-form-field>
+
+  <br>
+
 
   <br>
   <button mat-raised-button color="primary" (click)="aceptar()">Aceptar</button>

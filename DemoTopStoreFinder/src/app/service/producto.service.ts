@@ -7,7 +7,7 @@ import { environment } from './../../environments/environment';
   providedIn: 'root'
 })
 export class ProductoService {
-  url: string = `${environment.host}/producto`
+  url: string = `https://app-topstorefinder.herokuapp.com/producto`
   private listaCambio = new Subject<Producto[]>()
   private confirmaEliminacion = new Subject<Boolean>()
 

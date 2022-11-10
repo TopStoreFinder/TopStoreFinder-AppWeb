@@ -12,7 +12,7 @@ import { ProductoDialogoComponent } from './producto-dialogo/producto-dialogo.co
 })
 export class ProductoListarComponent implements OnInit {
   datasource: MatTableDataSource<Producto> = new MatTableDataSource();
-  displayedColumns: string[] = ['id', 'nombreProducto','productoDescripcion','cantidad','precioUnidad','categoriaProdcuto','acciones','accion2'];
+  displayedColumns: string[] = ['id', 'nombreProducto','productoDescripcion','cantidad','precioUnidad','categoriaProdcuto','id_Stock', 'acciones','accion2'];
   private idMayor: number = 0;
   constructor(private p: ProductoService, private dialog: MatDialog) { }
 
@@ -26,7 +26,6 @@ export class ProductoListarComponent implements OnInit {
     this.p.getConfirmaEliminacion().subscribe(data => {
       data == true ? this.eliminar(this.idMayor) : false;
     });
-
   }
   confirmar(id: number) {
     this.idMayor = id;
@@ -37,9 +36,11 @@ export class ProductoListarComponent implements OnInit {
   eliminar(id: number) {
     this.p.eliminar(id).subscribe(() => {
       this.p.listar().subscribe(data => {
-        this.p.setLista(data);/* se ejecuta la línea 27*/
+        this.p.setLista(data);
       });
     });
-
+  }
+  filtrar(e: any) {
+    this.datasource.filter = e.target.value.trim();
   }
 }
