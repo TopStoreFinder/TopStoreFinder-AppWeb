@@ -8,6 +8,7 @@ export class CompradorUbicacion {
   */
   id: number = 0;
   ubicacionid: number = 0;
+  ClienteId: number=0;
 
 
 }
