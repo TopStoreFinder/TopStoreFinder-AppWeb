@@ -11,8 +11,8 @@ import { ReseniacalificacionDialogoComponent } from './reseniacalificacion-dialo
 })
 export class ReseniacalificacionListarComponent implements OnInit {
   dataSource: MatTableDataSource<reseCalificacion> = new MatTableDataSource();
-  displayedColumns: string[] = ['id', 'qEstrellas', 'Resenia', 'Cliente_id', 'Tienda_id','acciones','accion2']
   private idMayor: number = 0;
+  displayedColumns: string[] = ['id', 'qEstrellas', 'Resenia', 'Cliente_id', 'Tienda_id','acciones','accion2'];
   constructor(private rcs: ReseñaCalificacionService, private dialog: MatDialog) { }
 
   ngOnInit(): void {
