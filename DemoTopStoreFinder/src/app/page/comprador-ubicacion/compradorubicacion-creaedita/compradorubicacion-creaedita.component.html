@@ -4,17 +4,29 @@
     <h1>Comprador Ubicacion</h1>
 
     <mat-form-field class="example-full-width">
-      <mat-label>ClienteId</mat-label>
+      <mat-label>Id</mat-label>
       <input matInput placeholder="id" [(ngModel)]="compradorubicacion.id">
     </mat-form-field>
 
     <br>
 
-    <mat-form-field class="example-full-width">
-      <mat-label>ubicacionid</mat-label>
-      <input matInput required placeholder="ubicacionid" [(ngModel)]="compradorubicacion.ubicacionid">
-
-    </mat-form-field>
+    <mat-form-field appearance="fill">
+      <mat-label>Seleccione Comprador</mat-label>
+      <mat-select [(value)]="idCompradorSeleccionado" required>
+          <mat-option *ngFor="let p of listaComprador" [value]="p.id">
+              {{p.nombre}}
+          </mat-option>
+      </mat-select>
+  </mat-form-field>
+  <br>
+<mat-form-field appearance="fill">
+  <mat-label>Seleccione Tipo Pago</mat-label>
+  <mat-select [(value)]="idUbicacionSeleccionado" required>
+      <mat-option *ngFor="let p of listaUbicacion" [value]="p.id">
+          {{p.id}}
+      </mat-option>
+  </mat-select>
+</mat-form-field>
 
 
     <br>
