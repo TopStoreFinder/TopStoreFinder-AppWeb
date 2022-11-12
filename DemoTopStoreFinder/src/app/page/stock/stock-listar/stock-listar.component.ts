@@ -12,7 +12,7 @@ import { MatDialog } from '@angular/material/dialog';
 export class StockListarComponent implements OnInit {
   datasource: MatTableDataSource<Stock> = new MatTableDataSource();
   private idMayor: number = 0;
-  displayedColumns: string[] = ['id', 'enStock','fecha','acciones','acciones2'];
+  displayedColumns: string[] = ['id', 'enStock','LastUpdateTime','acciones','acciones2'];
   constructor(private s: StockService,private dialog: MatDialog) { }
 
   ngOnInit(): void {

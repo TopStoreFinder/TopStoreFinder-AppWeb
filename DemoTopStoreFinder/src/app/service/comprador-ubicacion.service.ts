@@ -12,6 +12,9 @@ export class CompradorUbicacionService {
   private confirmaEliminacion = new Subject<Boolean>()
 
   constructor(private http: HttpClient) { }
+  getCount(){
+    return this.http.get<CompradorUbicacion[]>(this.url);
+  }
   listar() {
     return this.http.get<CompradorUbicacion[]>(this.url);
   }
