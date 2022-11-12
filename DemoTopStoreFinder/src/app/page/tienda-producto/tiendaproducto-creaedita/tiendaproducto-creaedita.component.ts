@@ -35,7 +35,7 @@ export class tiendaproductoCreaeditaComponent implements OnInit {
     this.productoService.listar().subscribe(data =>{this.listaProducto = data});
   }
   aceptar(): void {
-    if (this.tiendaproducto.tienda_id.id > 0  && this.tiendaproducto.productoid.id > 0) {
+    if (true) {
       let t = new Tienda();
       t.id = this.idTiendaSeleccionado;
       this.tiendaproducto.tienda_id = t;

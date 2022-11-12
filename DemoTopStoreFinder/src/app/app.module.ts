@@ -74,6 +74,9 @@ import { MatSelectModule } from '@angular/material/select';
 import { HomeComponent } from './page/home/home/home.component';
 import {MatCardModule} from '@angular/material/card';
 import { MatListModule } from '@angular/material/list';
+import { MatDatepickerModule } from '@angular/material/datepicker';
+import { DateAdapter, MatNativeDateModule, MAT_DATE_LOCALE } from '@angular/material/core';
+import { CustomDateAdapter } from './custom-adapter';
 
 
 @NgModule({
@@ -152,9 +155,15 @@ import { MatListModule } from '@angular/material/list';
     MatSelectModule,
     MatCardModule,
     MatSidenavModule,
-    MatListModule
+    MatListModule,
+    MatDatepickerModule,
+    MatNativeDateModule
+
   ],
-  providers: [],
+  providers: [
+    { provide: MAT_DATE_LOCALE, useValue: 'es-ES' },
+  { provide: DateAdapter, useClass: CustomDateAdapter }
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

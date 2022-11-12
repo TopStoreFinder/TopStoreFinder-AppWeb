@@ -24,7 +24,7 @@ export class StockCreaeditaComponent implements OnInit {
     });
   }
   aceptar(): void {
-    if (this.stock.enStock > 0 && this.stock.LastUpdateTime.length > 0 ) {
+    if (this.stock.enStock > 0) {
       if (this.edicion) {
         this.stockservice.modificar(this.stock).subscribe(data => {
           this.stockservice.listar().subscribe(data => {

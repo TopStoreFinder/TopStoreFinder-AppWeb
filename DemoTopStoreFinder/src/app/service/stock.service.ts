@@ -6,10 +6,13 @@ import { Subject, EMPTY } from 'rxjs';
   providedIn: 'root'
 })
 export class StockService {
-url: string = "http://localhost:5000/stock"
+url: string = "https://app-topstorefinder.herokuapp.com/stock"
 private listaCambio = new Subject<Stock[]>()
 private confirmaEliminacion = new Subject<Boolean>()
   constructor(private http:HttpClient) { }
+  getCount(){
+    return this.http.get<Stock[]>(this.url);
+  }
   listar(){
     return this.http.get<Stock[]>(this.url);
   }
@@ -23,7 +26,7 @@ private confirmaEliminacion = new Subject<Boolean>()
     return this.listaCambio.asObservable();
   }
   modificar(stock: Stock) {
-    return this.http.put(this.url + "/" + stock.id, stock);
+    return this.http.put(this.url, stock);
   }
   listarId(id: number) {
     return this.http.get<Stock>(`${this.url}/${id}`);
