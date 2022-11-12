@@ -8,7 +8,7 @@ import { environment } from './../../environments/environment';
   providedIn: 'root'
 })
 export class CompradorService {
-  url:  string = `https://app-topstorefinder.herokuapp.com/comprador`
+  url:  string = `http://localhost:8080/comprador`
   private listaCambio = new Subject<Comprador[]>()
   private confirmaEliminacion = new Subject<Boolean>()
   constructor(private http: HttpClient) { }

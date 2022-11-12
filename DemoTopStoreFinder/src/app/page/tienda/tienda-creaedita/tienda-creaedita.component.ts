@@ -23,7 +23,8 @@ export class tiendaCreaeditaComponent implements OnInit {
   listaDuenho: Duenho[]=[];
   listaTipoPago: TipoPago[]=[];
   constructor(private TiendaService: TiendaService,
-    private router: Router, private route: ActivatedRoute, private duenhoService:DuenhoService,private tipopagoService: TipoPagoService) { }
+    private router: Router, private route: ActivatedRoute,
+     private duenhoService:DuenhoService,private tipopagoService: TipoPagoService) { }
 
   ngOnInit(): void {
     this.route.params.subscribe((data: Params) => {

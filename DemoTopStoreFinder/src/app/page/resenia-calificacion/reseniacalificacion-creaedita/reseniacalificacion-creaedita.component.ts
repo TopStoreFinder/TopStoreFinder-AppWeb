@@ -24,7 +24,9 @@ export class ReseniacalificacionCreaeditaComponent implements OnInit {
   listaTienda: Tienda[]=[];
 
   constructor(private reseniacalificacionservice: ReseñaCalificacionService,
-    private router: Router, private route: ActivatedRoute, private compradorService: CompradorService, private tiendaService: TiendaService) { }
+    private router: Router, private route: ActivatedRoute,
+     private compradorService: CompradorService,
+      private tiendaService: TiendaService) { }
 
   ngOnInit(): void {
     this.route.params.subscribe((data: Params) => {

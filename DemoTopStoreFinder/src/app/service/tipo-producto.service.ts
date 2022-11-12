@@ -6,7 +6,7 @@ import { Subject, EMPTY } from 'rxjs';
   providedIn: 'root'
 })
 export class TipoProductoService {
-  url: string = "https://app-topstorefinder.herokuapp.com/tipoproducto"
+  url: string = "http://localhost:8080/tipoproducto"
   private listaCambio = new Subject<TipoProducto[]>()
   private confirmaEliminacion = new Subject<Boolean>()
   constructor(private http: HttpClient) { }

@@ -7,7 +7,7 @@ import { Subject , EMPTY} from 'rxjs';
   providedIn: 'root'
 })
 export class TiendaService {
-  url: string = `https://app-topstorefinder.herokuapp.com/tienda`
+  url: string = `http://localhost:8080/tienda`
   private listaCambio = new Subject<Tienda[]>()
   private confirmaEliminacion = new Subject<Boolean>()
 

@@ -8,7 +8,7 @@ import {Subject , EMPTY } from 'rxjs';
   providedIn: 'root'
 })
 export class DuenhoService {
-  url: string = `https://app-topstorefinder.herokuapp.com/duenho`
+  url: string = `http://localhost:8080/duenho`
   private listaCambio = new Subject<Duenho[]>()
   private confirmaEliminacion = new Subject<Boolean>()
   constructor(private http: HttpClient) { }
