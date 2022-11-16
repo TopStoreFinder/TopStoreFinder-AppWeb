@@ -24,7 +24,19 @@ export class ProductoCreaeditaComponent implements OnInit {
     });
   }
   aceptar(): void {
+<<<<<<< Updated upstream
     if (this.producto.nombreProducto.length > 0 && this.producto.productoDescripcion.length > 0 && this.producto.cantidad > 0 && this.producto.precioUnidad > 0 && this.producto.categoriaProdcuto > 0) {
+=======
+    if (this.producto.nombreProducto.length > 0 && this.producto.productoDescripcion.length > 0 && this.producto.precioUnidad > 0) {
+      let c = new TipoProducto();
+      c.id = this.idTipoProductoSeleccionado;
+      this.producto.categoriaProdcuto = c;
+
+      let s = new Stock();
+      s.id = this.idStockSeleccionado;
+      this.producto.id_Stock = s;
+
+>>>>>>> Stashed changes
       if (this.edicion) {
         this.productoservice.modificar(this.producto).subscribe(data => {
           this.productoservice.listar().subscribe(data => {
