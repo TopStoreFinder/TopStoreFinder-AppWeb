@@ -3,8 +3,8 @@ import { Comprador } from "./comprador";
 
 export class reseCalificacion {
   id: number = 0;
-  qEstrellas: number = 0;
-  Resenia: string = "";
-  Cliente_id: Comprador = new Comprador();
-  Tienda_id: Tienda = new Tienda();
+  cantestrellas: number = 0;
+  resenia: string = "";
+  clienteid: Comprador = new Comprador();
+  tiendaid: Tienda = new Tienda();
 }
