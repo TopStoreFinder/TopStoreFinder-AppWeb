@@ -35,15 +35,7 @@ export class ProductoCreaeditaComponent implements OnInit {
     this.stockService.listar().subscribe(data =>{this.listaStock = data});
   }
   aceptar(): void {
-<<<<<<< HEAD
-    if (this.producto.nombreProducto.length > 0 && this.producto.productoDescripcion.length > 0 &&
-       this.producto.cantidad > 0 && this.producto.precioUnidad > 0) {
-=======
-<<<<<<< Updated upstream
-    if (this.producto.nombreProducto.length > 0 && this.producto.productoDescripcion.length > 0 && this.producto.cantidad > 0 && this.producto.precioUnidad > 0 && this.producto.categoriaProdcuto > 0) {
-=======
     if (this.producto.nombreProducto.length > 0 && this.producto.productoDescripcion.length > 0 && this.producto.precioUnidad > 0) {
->>>>>>> Carlos-Alberto-Quispe-Guzman
       let c = new TipoProducto();
       c.id = this.idTipoProductoSeleccionado;
       this.producto.categoriaProdcuto = c;
@@ -52,10 +44,6 @@ export class ProductoCreaeditaComponent implements OnInit {
       s.id = this.idStockSeleccionado;
       this.producto.id_Stock = s;
 
-<<<<<<< HEAD
-=======
->>>>>>> Stashed changes
->>>>>>> Carlos-Alberto-Quispe-Guzman
       if (this.edicion) {
         this.productoservice.modificar(this.producto).subscribe(data => {
           this.productoservice.listar().subscribe(data => {
