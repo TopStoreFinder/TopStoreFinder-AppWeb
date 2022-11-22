@@ -74,6 +74,13 @@ import { MatSelectModule } from '@angular/material/select';
 import { HomeComponent } from './page/home/home/home.component';
 import {MatCardModule} from '@angular/material/card';
 import { MatListModule } from '@angular/material/list';
+<<<<<<< Updated upstream
+=======
+import { MatDatepickerModule } from '@angular/material/datepicker';
+import { DateAdapter, MatNativeDateModule, MAT_DATE_LOCALE } from '@angular/material/core';
+import { CustomDateAdapter } from './custom-adapter';
+import { TipoPagoResultadoqueryComponent } from './page/tipo-pago/tipo-pago-resultadoquery/tipo-pago-resultadoquery.component';
+>>>>>>> Stashed changes
 
 
 @NgModule({
@@ -136,6 +143,7 @@ import { MatListModule } from '@angular/material/list';
     TipoProductoBuscarComponent,
     StockBuscarComponent,
     HomeComponent,
+    TipoPagoResultadoqueryComponent,
   ],
   imports: [
     BrowserModule,

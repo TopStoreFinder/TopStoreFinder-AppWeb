@@ -1,3 +1,4 @@
+import { ResultadoTIendasPorTipoPago } from './../model/resultadoTIendasPorTipoPago';
 import { HttpClient } from '@angular/common/http'
 import { TipoPago } from '../model/tipoPago';
 import { Injectable } from '@angular/core';
@@ -21,6 +22,11 @@ export class TipoPagoService {
   listar() {
     return this.http.get<TipoPago[]>(this.url);
   }
+
+  BuscarTipopagoPorTienda(){
+    return this.http.get<ResultadoTIendasPorTipoPago[]>(`${this.url}/buscarcantidadtiendasportipoPago`);
+  }
+
   insertar(tiopago: TipoPago) {
     return this.http.post(this.url, tiopago);
   }
