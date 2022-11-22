@@ -1,3 +1,4 @@
+import { TipoPagoResultadoqueryComponent } from './page/tipo-pago/tipo-pago-resultadoquery/tipo-pago-resultadoquery.component';
 
 import { CompradorubicacionCreaeditaComponent } from './page/comprador-ubicacion/compradorubicacion-creaedita/compradorubicacion-creaedita.component';
 import { TipoProductoCreaditaComponent } from './page/tipo-producto/tipo-producto-creadita/tipo-producto-creadita.component';
@@ -33,7 +34,8 @@ const routes: Routes = [
   },{
     path: 'tipopago', component: TipoPagoComponent, children: [
       {path: 'nuevo', component: TipopagoCreaeditaComponent},
-      { path: 'edicion/:id', component: TipopagoCreaeditaComponent }
+      { path: 'edicion/:id', component: TipopagoCreaeditaComponent },
+      { path :'resultadocanttipopagoportienda',component: TipoPagoResultadoqueryComponent}
     ]
   }, {
     path: 'reseniacalificacion', component: ReseniaCalificacionComponent, children: [

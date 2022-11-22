@@ -77,6 +77,7 @@ import { MatListModule } from '@angular/material/list';
 import { MatDatepickerModule } from '@angular/material/datepicker';
 import { DateAdapter, MatNativeDateModule, MAT_DATE_LOCALE } from '@angular/material/core';
 import { CustomDateAdapter } from './custom-adapter';
+import { TipoPagoResultadoqueryComponent } from './page/tipo-pago/tipo-pago-resultadoquery/tipo-pago-resultadoquery.component';
 
 
 @NgModule({
@@ -139,6 +140,7 @@ import { CustomDateAdapter } from './custom-adapter';
     TipoProductoBuscarComponent,
     StockBuscarComponent,
     HomeComponent,
+    TipoPagoResultadoqueryComponent,
   ],
   imports: [
     BrowserModule,
