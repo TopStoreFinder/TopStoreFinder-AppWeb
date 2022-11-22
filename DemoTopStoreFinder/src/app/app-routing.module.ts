@@ -1,3 +1,4 @@
+import { TiendaCantidadTiendasComponent } from './page/tienda/tienda-cantidad-tiendas/tienda-cantidad-tiendas.component';
 import { TipoPagoResultadoqueryComponent } from './page/tipo-pago/tipo-pago-resultadoquery/tipo-pago-resultadoquery.component';
 
 import { CompradorubicacionCreaeditaComponent } from './page/comprador-ubicacion/compradorubicacion-creaedita/compradorubicacion-creaedita.component';
@@ -70,7 +71,8 @@ const routes: Routes = [
   }, {
     path: 'tienda', component: TiendaComponent, children: [
       {path: 'nuevo', component: tiendaCreaeditaComponent},
-      { path: 'edicion/:id', component: tiendaCreaeditaComponent }
+      { path: 'edicion/:id', component: tiendaCreaeditaComponent },
+      {path:'buscarcantidadtiendasporcadaduenho', component:TiendaCantidadTiendasComponent}
 
     ]
   }, {

@@ -78,6 +78,7 @@ import { MatDatepickerModule } from '@angular/material/datepicker';
 import { DateAdapter, MatNativeDateModule, MAT_DATE_LOCALE } from '@angular/material/core';
 import { CustomDateAdapter } from './custom-adapter';
 import { TipoPagoResultadoqueryComponent } from './page/tipo-pago/tipo-pago-resultadoquery/tipo-pago-resultadoquery.component';
+import { TiendaCantidadTiendasComponent } from './page/tienda/tienda-cantidad-tiendas/tienda-cantidad-tiendas.component';
 
 
 @NgModule({
@@ -141,6 +142,7 @@ import { TipoPagoResultadoqueryComponent } from './page/tipo-pago/tipo-pago-resu
     StockBuscarComponent,
     HomeComponent,
     TipoPagoResultadoqueryComponent,
+    TiendaCantidadTiendasComponent,
   ],
   imports: [
     BrowserModule,

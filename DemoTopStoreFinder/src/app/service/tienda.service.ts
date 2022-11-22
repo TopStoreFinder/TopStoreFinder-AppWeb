@@ -1,3 +1,4 @@
+import { ResultadoCantidadTiendasPorCadaDuenho } from './../model/resultadoCantidadTiendasPorCadaDuenho';
 import { environment } from './../../environments/environment';
 import { Tienda } from './../model/tienda';
 import { HttpClient } from '@angular/common/http'
@@ -18,6 +19,10 @@ export class TiendaService {
   listar() {
     return this.http.get<Tienda[]>(this.url);
   }
+  BuscarCantidadTiendasPorCadaDuenho(){
+    return this.http.get<ResultadoCantidadTiendasPorCadaDuenho[]>(`${this.url}/buscarcantidadtiendasporcadaduenho`);
+  }
+
   insertar(Tienda: Tienda) {
     return this.http.post(this.url, Tienda);
   }
