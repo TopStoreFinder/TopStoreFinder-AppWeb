@@ -1,3 +1,4 @@
+import { ResultadoCantidadStockPorProducto } from './../model/ResultadoCantidadStockPorProducto';
 import {HttpClient} from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Stock } from './../model/Stock';
@@ -19,6 +20,13 @@ private confirmaEliminacion = new Subject<Boolean>()
   insertar(stock: Stock) {
     return this.http.post(this.url,stock);
   }
+
+
+  BuscarTipopagoPorTienda(){
+    return this.http.get<ResultadoCantidadStockPorProducto[]>(`${this.url}/buscarstockporproducto`);
+  }
+
+
   setLista(listaNueva: Stock[]) {
     this.listaCambio.next(listaNueva);
   }
