@@ -1,3 +1,4 @@
+import { ResultadoCantidadPrecioDeterminado } from './../model/ResultadoCantidadPrecioDeterminados';
 import { environment } from './../../environments/environment';
 import { TiendaProducto } from './../model/tiendaProducto';
 import { HttpClient } from '@angular/common/http'
@@ -22,6 +23,10 @@ export class TiendaProductoService {
   insertar(TiendaProducto: TiendaProducto) {
     return this.http.post(this.url, TiendaProducto);
   }
+  BuscarCantidadTiendasPorCadaDuenho(){
+    return this.http.get<ResultadoCantidadPrecioDeterminado[]>(`${this.url}/buscarcantidadpreciosDeterminados`);
+  }
+
   setLista(listaNueva: TiendaProducto[]) {
     this.listaCambio.next(listaNueva);
   }

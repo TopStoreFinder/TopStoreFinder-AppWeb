@@ -1,3 +1,4 @@
+import { QueryCantidadPredcioDeterminadComponent } from './page/tienda-producto/query-cantidad-predcio-determinad/query-cantidad-predcio-determinad.component';
 import { ResultadoReseniaComponent } from './page/resenia-calificacion/resultado-resenia/resultado-resenia.component';
 import { ResultadoProductoComponent } from './page/producto/resultado-producto/resultado-producto.component';
 import { ResultadoCantidadProductosporcadaTienda } from './model/ResultadoCantidadProductosporcadaTienda';
@@ -73,7 +74,8 @@ const routes: Routes = [
   }, {
     path: 'tiendaproducto', component: TiendaProductoComponent, children: [
       {path: 'nuevo', component: tiendaproductoCreaeditaComponent},
-      { path: 'edicion/:id', component: tiendaproductoCreaeditaComponent }
+      { path: 'edicion/:id', component: tiendaproductoCreaeditaComponent },
+      {path: 'buscarcantidadpreciosDeterminados', component:QueryCantidadPredcioDeterminadComponent}
     ]
   }, {
     path: 'tienda', component: TiendaComponent, children: [
