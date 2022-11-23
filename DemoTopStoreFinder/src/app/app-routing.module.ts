@@ -1,3 +1,4 @@
+import { Querystockproductomenor50Component } from './page/stock/querystockproductomenor50/querystockproductomenor50.component';
 import { QueryStockProductoComponent } from './page/stock/query-stock-producto/query-stock-producto.component';
 import { TipoProductoResultadoqueryComponent } from './page/tipo-producto/tipo-producto-resultadoquery/tipo-producto-resultadoquery.component';
 import { QueryCantidadPrecioDeterminadComponent } from './page/tienda-producto/query-cantidad-precio-determinad/query-cantidad-precio-determinad.component';
@@ -102,7 +103,8 @@ const routes: Routes = [
     path: 'stock', component: StockComponent, children: [
       { path: 'nuevo', component: StockCreaeditaComponent },
       { path: 'edicion/:id', component: StockCreaeditaComponent },
-      {path :'buscarcantidadstcokporproducto', component:QueryStockProductoComponent}
+      {path :'buscarcantidadstcokporproducto', component:QueryStockProductoComponent},
+      {path :'buscarcantidadstcokporproductomenor50', component:Querystockproductomenor50Component}
     ]
   }
 
