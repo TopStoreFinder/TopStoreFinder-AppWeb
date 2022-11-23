@@ -1,3 +1,4 @@
+import { ResultadoCantidadPorUbicaion } from './../model/resultadoquerycompradorubicacion';
 import { Subject , EMPTY} from 'rxjs';
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http'
@@ -7,13 +8,19 @@ import { CompradorUbicacion } from '../model/compradorUbicacion';
   providedIn: 'root'
 })
 export class CompradorUbicacionService {
-  url: string = "http://localhost:5000/compradorubicacion"
+  url: string = "https://app-topstorefinder.herokuapp.com/compradorubicacion"
   private listaCambio = new Subject<CompradorUbicacion[]>()
   private confirmaEliminacion = new Subject<Boolean>()
 
   constructor(private http: HttpClient) { }
+  getCount(){
+    return this.http.get<CompradorUbicacion[]>(this.url);
+  }
   listar() {
     return this.http.get<CompradorUbicacion[]>(this.url);
+  }
+  BuscarCantidadporUbicaion(){
+    return this.http.get<ResultadoCantidadPorUbicaion[]>(`${this.url}/buscarcantidadlongitudDeterminada`);
   }
   insertar(compradorubicacion: CompradorUbicacion) {
     return this.http.post(this.url, compradorubicacion);
@@ -25,7 +32,7 @@ export class CompradorUbicacionService {
     return this.listaCambio.asObservable();
   }
   modificar(compradorubicacion: CompradorUbicacion) {
-    return this.http.put(this.url + "/" + compradorubicacion.id, compradorubicacion);
+    return this.http.put(this.url, compradorubicacion);
   }
   listarId(id: number) {
     return this.http.get<CompradorUbicacion>(`${this.url}/${id}`);

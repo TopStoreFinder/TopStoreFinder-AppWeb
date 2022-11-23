@@ -17,8 +17,8 @@ export class ProductoListarComponent implements OnInit {
   constructor(private p: ProductoService, private dialog: MatDialog) { }
 
   ngOnInit(): void {
-    this.p.listar().subscribe(a => {
-      this.datasource = new MatTableDataSource(a)
+    this.p.listar().subscribe(data => {
+      this.datasource = new MatTableDataSource(data)
     })
     this.p.getLista().subscribe(data => {
       this.datasource = new MatTableDataSource(data);

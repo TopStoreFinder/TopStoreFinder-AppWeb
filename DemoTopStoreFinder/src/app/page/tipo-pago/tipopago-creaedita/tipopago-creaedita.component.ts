@@ -14,7 +14,8 @@ export class TipopagoCreaeditaComponent implements OnInit {
   mensaje: string = "";
   edicion: boolean = false;
   id: number = 0;
-  constructor(private tipopagoservice: TipoPagoService,private router: Router, private route: ActivatedRoute) { }
+  constructor(private tipopagoservice: TipoPagoService,
+    private router: Router, private route: ActivatedRoute) { }
 
   ngOnInit(): void {
     this.route.params.subscribe((data: Params) => {

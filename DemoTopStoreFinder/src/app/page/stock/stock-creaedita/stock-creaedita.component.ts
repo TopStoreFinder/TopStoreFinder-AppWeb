@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, Params, Router } from '@angular/router';
 import { Stock } from 'src/app/model/Stock';
 import { StockService } from 'src/app/service/stock.service';
+import * as moment from 'moment';
 
 @Component({
   selector: 'app-stock-creaedita',
@@ -13,6 +14,8 @@ export class StockCreaeditaComponent implements OnInit {
   mensaje: string = "";
   edicion: boolean = false;
   id: number = 0;
+  fechaSeleccionada: Date = moment().add(-1, 'days').toDate();
+  maxFecha: Date = moment().add(-1, 'days').toDate();
   constructor(private stockservice: StockService,
     private router: Router, private route: ActivatedRoute) { }
 
@@ -24,7 +27,8 @@ export class StockCreaeditaComponent implements OnInit {
     });
   }
   aceptar(): void {
-    if (this.stock.enStock > 0 && this.stock.LastUpdateTime.length > 0 ) {
+    if (this.stock.enStock > 0 ) {
+      this.stock.fecha = moment(this.fechaSeleccionada).format('YYYY-MM-DDTHH:mm:ss');
       if (this.edicion) {
         this.stockservice.modificar(this.stock).subscribe(data => {
           this.stockservice.listar().subscribe(data => {
@@ -32,7 +36,6 @@ export class StockCreaeditaComponent implements OnInit {
           })
         })
       } else {
-
         this.stockservice.insertar(this.stock).subscribe(data => {
           this.stockservice.listar().subscribe(data => {
             this.stockservice.setLista(data);

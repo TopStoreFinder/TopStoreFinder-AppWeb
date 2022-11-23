@@ -1,3 +1,4 @@
+import { ResultadoCantidadProductosporcadaTienda } from './../model/ResultadoCantidadProductosporcadaTienda';
 import { Producto } from './../model/producto';
 import { HttpClient } from '@angular/common/http'
 import { Injectable } from '@angular/core';
@@ -48,5 +49,8 @@ export class ProductoService {
       });
     }
     return EMPTY;
+  }
+  BuscarCantidadProductosPorTienda(){
+    return this.http.get<ResultadoCantidadProductosporcadaTienda[]>(`${this.url}/buscarcantidadtiendasporproducto`);
   }
 }

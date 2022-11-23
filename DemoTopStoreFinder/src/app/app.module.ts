@@ -74,6 +74,15 @@ import { MatSelectModule } from '@angular/material/select';
 import { HomeComponent } from './page/home/home/home.component';
 import {MatCardModule} from '@angular/material/card';
 import { MatListModule } from '@angular/material/list';
+import { MatDatepickerModule } from '@angular/material/datepicker';
+import { DateAdapter, MatNativeDateModule, MAT_DATE_LOCALE } from '@angular/material/core';
+import { CustomDateAdapter } from './custom-adapter';
+import { TipoPagoResultadoqueryComponent } from './page/tipo-pago/tipo-pago-resultadoquery/tipo-pago-resultadoquery.component';
+import { TiendaCantidadTiendasComponent } from './page/tienda/tienda-cantidad-tiendas/tienda-cantidad-tiendas.component';
+import { QueryCompradorUbicacionComponent } from './page/comprador-ubicacion/query-comprador-ubicacion/query-comprador-ubicacion.component';
+import { ResultadoProductoComponent } from './page/producto/resultado-producto/resultado-producto.component';
+import { ResultadoReseniaComponent } from './page/resenia-calificacion/resultado-resenia/resultado-resenia.component';
+import { QueryCantidadPredcioDeterminadComponent } from './page/tienda-producto/query-cantidad-predcio-determinad/query-cantidad-predcio-determinad.component';
 
 
 @NgModule({
@@ -136,6 +145,12 @@ import { MatListModule } from '@angular/material/list';
     TipoProductoBuscarComponent,
     StockBuscarComponent,
     HomeComponent,
+    TipoPagoResultadoqueryComponent,
+    TiendaCantidadTiendasComponent,
+    QueryCompradorUbicacionComponent,
+    ResultadoProductoComponent,
+    ResultadoReseniaComponent,
+    QueryCantidadPredcioDeterminadComponent,
   ],
   imports: [
     BrowserModule,
@@ -152,9 +167,15 @@ import { MatListModule } from '@angular/material/list';
     MatSelectModule,
     MatCardModule,
     MatSidenavModule,
-    MatListModule
+    MatListModule,
+    MatDatepickerModule,
+    MatNativeDateModule
+
   ],
-  providers: [],
+  providers: [
+    { provide: MAT_DATE_LOCALE, useValue: 'es-ES' },
+  { provide: DateAdapter, useClass: CustomDateAdapter }
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

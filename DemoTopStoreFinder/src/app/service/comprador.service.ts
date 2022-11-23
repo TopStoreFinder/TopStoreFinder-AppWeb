@@ -12,6 +12,10 @@ export class CompradorService {
   private listaCambio = new Subject<Comprador[]>()
   private confirmaEliminacion = new Subject<Boolean>()
   constructor(private http: HttpClient) { }
+
+  getCount(){
+    return this.http.get<Comprador[]>(this.url);
+  }
   listar() {
     return this.http.get<Comprador[]>(this.url);
   }

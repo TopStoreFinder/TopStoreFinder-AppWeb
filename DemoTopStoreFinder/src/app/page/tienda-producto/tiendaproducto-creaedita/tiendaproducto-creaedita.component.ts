@@ -17,13 +17,13 @@ export class tiendaproductoCreaeditaComponent implements OnInit {
   mensaje: string = "";
   edicion: boolean = false;
   id: number = 0;
-  idTiendaSeleccionado:number =0;
-  idProductoSeleccionado:number =0;
+  idTiendaSeleccionado: number = 0;
+  idProductoSeleccionado: number = 0;
 
-  listaTienda: Tienda[]=[];
-  listaProducto: Producto[]=[];
+  listaTienda: Tienda[] = [];
+  listaProducto: Producto[] = [];
   constructor(private TiendaProductoService: TiendaProductoService,
-    private router: Router, private route: ActivatedRoute, private tiendaService:TiendaService,private productoService:ProductoService) { }
+    private router: Router, private route: ActivatedRoute, private tiendaService: TiendaService, private productoService: ProductoService) { }
 
   ngOnInit(): void {
     this.route.params.subscribe((data: Params) => {
@@ -31,14 +31,14 @@ export class tiendaproductoCreaeditaComponent implements OnInit {
       this.edicion = data['id'] != null;
       this.init();
     });
-    this.tiendaService.listar().subscribe(data =>{this.listaTienda = data});
-    this.productoService.listar().subscribe(data =>{this.listaProducto = data});
+    this.tiendaService.listar().subscribe(data => { this.listaTienda = data });
+    this.productoService.listar().subscribe(data => { this.listaProducto = data });
   }
   aceptar(): void {
-    if (this.tiendaproducto.tienda_id.id > 0  && this.tiendaproducto.productoid.id > 0) {
+    //if (true) {
       let t = new Tienda();
       t.id = this.idTiendaSeleccionado;
-      this.tiendaproducto.tienda_id = t;
+      this.tiendaproducto.tiendaid = t;
 
       let p = new Producto();
       p.id = this.idProductoSeleccionado;
@@ -60,9 +60,9 @@ export class tiendaproductoCreaeditaComponent implements OnInit {
         })
       }
       this.router.navigate(['tiendaproducto']);
-    } else {
-      this.mensaje = "Complete los valores requeridos";
-    }
+    //} else {
+     // this.mensaje = "Complete los valores requeridos";
+    //}
   }
 
 
@@ -70,7 +70,7 @@ export class tiendaproductoCreaeditaComponent implements OnInit {
     if (this.edicion) {
       this.TiendaProductoService.listarId(this.id).subscribe(data => {
         this.tiendaproducto = data;
-        this.idTiendaSeleccionado = data.tienda_id.id;
+        this.idTiendaSeleccionado = data.tiendaid.id;
         this.idProductoSeleccionado = data.productoid.id;
       })
     }

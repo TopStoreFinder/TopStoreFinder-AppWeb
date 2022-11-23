@@ -17,7 +17,7 @@ export class ReseniacalificacionBuscarComponent implements OnInit {
     let array: reseCalificacion[] = [];
     this.reseniacalificacionservice.listar().subscribe(data => {
       data.forEach((element, index) => {
-        if (element.Resenia.includes(e.target.value)) {
+        if (element.resenia.includes(e.target.value)) {
           array.push(data[index]);
         }
       });

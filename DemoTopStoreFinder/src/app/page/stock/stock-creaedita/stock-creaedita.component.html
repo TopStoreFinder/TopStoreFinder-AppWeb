@@ -1,11 +1,10 @@
-<p>stock-creaedita works!</p>
 <div class="container">
 
   <h1>Stock</h1>
 
   <mat-form-field class="example-full-width">
     <mat-label>Id</mat-label>
-    <input matInput placeholder="Id" [(ngModel)]="stock.id">
+    <input matInput placeholder="id" [(ngModel)]="stock.id">
   </mat-form-field>
 
   <br>
@@ -17,10 +16,12 @@
   </mat-form-field>
 
   <br>
-  <mat-form-field class="example-full-width">
-    <mat-label>LastUpdateTime</mat-label>
-    <input type="LastUpdateTime" matInput required placeholder="LastUpdateTime" [(ngModel)]="stock.LastUpdateTime">
-  </mat-form-field>
+  <mat-form-field appearance="fill">
+    <mat-label>Fecha de fabricaciòn</mat-label>
+    <input matInput [matDatepicker]="picker" [(ngModel)]="fechaSeleccionada" [max]="maxFecha">
+    <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+    <mat-datepicker #picker></mat-datepicker>
+</mat-form-field>
   <br>
   <br>
   <br>

@@ -2,13 +2,11 @@ import { Comprador } from "./comprador";
 import { Ubicacion } from "./ubicacion";
 export class CompradorUbicacion {
 
-  /*
+  id: number = 0;
   clienteid:Comprador=new Comprador;
   ubicacionid:Ubicacion=new Ubicacion;
-  */
-  id: number = 0;
-  ubicacionid: number = 0;
-  ClienteId: number=0;
+
+
 
 
 }

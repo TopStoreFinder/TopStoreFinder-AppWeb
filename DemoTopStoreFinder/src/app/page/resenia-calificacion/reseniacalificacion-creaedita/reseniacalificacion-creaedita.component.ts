@@ -24,7 +24,9 @@ export class ReseniacalificacionCreaeditaComponent implements OnInit {
   listaTienda: Tienda[]=[];
 
   constructor(private reseniacalificacionservice: ReseñaCalificacionService,
-    private router: Router, private route: ActivatedRoute, private compradorService: CompradorService, private tiendaService: TiendaService) { }
+    private router: Router, private route: ActivatedRoute,
+     private compradorService: CompradorService,
+      private tiendaService: TiendaService) { }
 
   ngOnInit(): void {
     this.route.params.subscribe((data: Params) => {
@@ -38,14 +40,14 @@ export class ReseniacalificacionCreaeditaComponent implements OnInit {
   }
 
   aceptar(): void {
-    if (this.reseniacalifi.qEstrellas>0 && this.reseniacalifi.Resenia.length > 0 && this.idClienteSeleccionado>0 && this.idTiendaSeleccionada>0 ) {
+    if (this.reseniacalifi.cantestrellas>0 && this.reseniacalifi.resenia.length > 0 && this.idClienteSeleccionado>0 && this.idTiendaSeleccionada>0 ) {
       let p = new Comprador();
       p.id = this.idClienteSeleccionado;
-      this.reseniacalifi.Cliente_id = p;
+      this.reseniacalifi.clienteid = p;
 
       let a = new Tienda();
       a.id = this.idTiendaSeleccionada;
-      this.reseniacalifi.Tienda_id = a;
+      this.reseniacalifi.tiendaid = a;
 
       if (this.edicion) {
         this.reseniacalificacionservice.modificar(this.reseniacalifi).subscribe(data => {
@@ -70,8 +72,8 @@ export class ReseniacalificacionCreaeditaComponent implements OnInit {
     if (this.edicion) {
       this.reseniacalificacionservice.listarId(this.id).subscribe(data => {
         this.reseniacalifi = data;
-        this.idClienteSeleccionado = data.Cliente_id.id;
-        this.idTiendaSeleccionada = data.Tienda_id.id;
+        this.idClienteSeleccionado = data.clienteid.id;
+        this.idTiendaSeleccionada = data.tiendaid.id;
 
       })
     }
