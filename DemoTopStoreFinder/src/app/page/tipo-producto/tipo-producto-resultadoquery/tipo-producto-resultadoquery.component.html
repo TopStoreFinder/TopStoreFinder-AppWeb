@@ -1,7 +1,7 @@
 <div class="container">
     <h1> Lista Cantidad de Productos por Categoria</h1>
-  
-  
+
+
     <table mat-table [dataSource]="dataSource" class="mat-elevation-z8">
       <ng-container matColumnDef="categoria_nombre">
         <th mat-header-cell *matHeaderCellDef> Categoria de Productos </th>
@@ -15,4 +15,3 @@
       <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
     </table>
   </div>
-  

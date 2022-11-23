@@ -1,3 +1,4 @@
+import { TipoProductoResultadoqueryComponent } from './page/tipo-producto/tipo-producto-resultadoquery/tipo-producto-resultadoquery.component';
 import { MatSidenavModule } from '@angular/material/sidenav';
 
 import { NgModule } from '@angular/core';
@@ -152,7 +153,9 @@ import { QueryStockProductoComponent } from './page/stock/query-stock-producto/q
     ResultadoProductoComponent,
     ResultadoReseniaComponent,
     QueryCantidadPrecioDeterminadComponent,
-    QueryStockProductoComponent
+    QueryStockProductoComponent,
+    QueryCantidadPrecioDeterminadComponent,
+    TipoProductoResultadoqueryComponent
   ],
   imports: [
     BrowserModule,
