@@ -1,3 +1,4 @@
+import { QueryCompradorUbicacionComponent } from './page/comprador-ubicacion/query-comprador-ubicacion/query-comprador-ubicacion.component';
 import { TiendaCantidadTiendasComponent } from './page/tienda/tienda-cantidad-tiendas/tienda-cantidad-tiendas.component';
 import { TipoPagoResultadoqueryComponent } from './page/tipo-pago/tipo-pago-resultadoquery/tipo-pago-resultadoquery.component';
 
@@ -56,7 +57,8 @@ const routes: Routes = [
   }, {
     path: 'compradorubicacion', component: CompradorUbicacionComponent, children: [
       { path: 'nuevo', component: CompradorubicacionCreaeditaComponent },
-      { path: 'edicion/:id', component: CompradorubicacionCreaeditaComponent }
+      { path: 'edicion/:id', component: CompradorubicacionCreaeditaComponent },
+      { path: 'cantidadcompradorubicacion', component:QueryCompradorUbicacionComponent}
     ]
   }, {
     path: 'ubicacion', component: UbicacionComponent, children: [

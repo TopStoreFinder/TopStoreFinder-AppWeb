@@ -79,6 +79,7 @@ import { DateAdapter, MatNativeDateModule, MAT_DATE_LOCALE } from '@angular/mate
 import { CustomDateAdapter } from './custom-adapter';
 import { TipoPagoResultadoqueryComponent } from './page/tipo-pago/tipo-pago-resultadoquery/tipo-pago-resultadoquery.component';
 import { TiendaCantidadTiendasComponent } from './page/tienda/tienda-cantidad-tiendas/tienda-cantidad-tiendas.component';
+import { QueryCompradorUbicacionComponent } from './page/comprador-ubicacion/query-comprador-ubicacion/query-comprador-ubicacion.component';
 
 
 @NgModule({
@@ -143,6 +144,7 @@ import { TiendaCantidadTiendasComponent } from './page/tienda/tienda-cantidad-ti
     HomeComponent,
     TipoPagoResultadoqueryComponent,
     TiendaCantidadTiendasComponent,
+    QueryCompradorUbicacionComponent,
   ],
   imports: [
     BrowserModule,

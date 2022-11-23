@@ -1,3 +1,4 @@
+import { ResultadoCantidadPorUbicaion } from './../model/resultadoquerycompradorubicacion';
 import { Subject , EMPTY} from 'rxjs';
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http'
@@ -17,6 +18,9 @@ export class CompradorUbicacionService {
   }
   listar() {
     return this.http.get<CompradorUbicacion[]>(this.url);
+  }
+  BuscarCantidadporUbicaion(){
+    return this.http.get<ResultadoCantidadPorUbicaion[]>(`${this.url}/buscarcantidadlongitudDeterminada`);
   }
   insertar(compradorubicacion: CompradorUbicacion) {
     return this.http.post(this.url, compradorubicacion);
