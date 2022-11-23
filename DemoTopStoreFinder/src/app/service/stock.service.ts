@@ -22,7 +22,7 @@ private confirmaEliminacion = new Subject<Boolean>()
   }
 
 
-  BuscarTipopagoPorTienda(){
+  BuscarStockPorProducto(){
     return this.http.get<ResultadoCantidadStockPorProducto[]>(`${this.url}/buscarstockporproducto`);
   }
 

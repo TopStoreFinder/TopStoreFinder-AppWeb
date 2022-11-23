@@ -83,6 +83,7 @@ import { QueryCompradorUbicacionComponent } from './page/comprador-ubicacion/que
 import { ResultadoProductoComponent } from './page/producto/resultado-producto/resultado-producto.component';
 import { ResultadoReseniaComponent } from './page/resenia-calificacion/resultado-resenia/resultado-resenia.component';
 import { QueryCantidadPrecioDeterminadComponent } from './page/tienda-producto/query-cantidad-precio-determinad/query-cantidad-precio-determinad.component';
+import { QueryStockProductoComponent } from './page/stock/query-stock-producto/query-stock-producto.component';
 
 
 @NgModule({
@@ -150,7 +151,8 @@ import { QueryCantidadPrecioDeterminadComponent } from './page/tienda-producto/q
     QueryCompradorUbicacionComponent,
     ResultadoProductoComponent,
     ResultadoReseniaComponent,
-    QueryCantidadPrecioDeterminadComponent
+    QueryCantidadPrecioDeterminadComponent,
+    QueryStockProductoComponent
   ],
   imports: [
     BrowserModule,
