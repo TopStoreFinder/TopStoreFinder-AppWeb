@@ -8,7 +8,7 @@ import { Subject , EMPTY} from 'rxjs';
   providedIn: 'root'
 })
 export class UbicacionService {
-  url: string = `http://localhost:8080/ubicacion`
+  url: string = `https://app-topstorefinder.herokuapp.com/ubicacion`
   private listaCambio = new Subject<Ubicacion[]>()
   private confirmaEliminacion = new Subject<Boolean>()
 

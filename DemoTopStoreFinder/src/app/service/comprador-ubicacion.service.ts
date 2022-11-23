@@ -7,7 +7,7 @@ import { CompradorUbicacion } from '../model/compradorUbicacion';
   providedIn: 'root'
 })
 export class CompradorUbicacionService {
-  url: string = "http://localhost:8080/compradorubicacion"
+  url: string = "https://app-topstorefinder.herokuapp.com/compradorubicacion"
   private listaCambio = new Subject<CompradorUbicacion[]>()
   private confirmaEliminacion = new Subject<Boolean>()
 

@@ -8,7 +8,7 @@ import { Subject, EMPTY } from 'rxjs';
   providedIn: 'root'
 })
 export class ReseñaCalificacionService {
-  url: string = `http://localhost:8080/reseniacalificacion`
+  url: string = `https://app-topstorefinder.herokuapp.com/reseniacalificacion`
   private listaCambio = new Subject<reseCalificacion[]>()
   private confirmaEliminacion = new Subject<Boolean>()
   constructor(private http: HttpClient) { }
