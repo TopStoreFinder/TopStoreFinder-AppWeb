@@ -1,3 +1,4 @@
+import { ResultadoReseniaComponent } from './page/resenia-calificacion/resultado-resenia/resultado-resenia.component';
 import { ResultadoProductoComponent } from './page/producto/resultado-producto/resultado-producto.component';
 import { ResultadoCantidadProductosporcadaTienda } from './model/ResultadoCantidadProductosporcadaTienda';
 import { QueryCompradorUbicacionComponent } from './page/comprador-ubicacion/query-comprador-ubicacion/query-comprador-ubicacion.component';
@@ -44,7 +45,8 @@ const routes: Routes = [
   }, {
     path: 'reseniacalificacion', component: ReseniaCalificacionComponent, children: [
       { path: 'nuevo', component: ReseniacalificacionCreaeditaComponent },
-    { path: 'edicion/:id', component: ReseniacalificacionCreaeditaComponent }
+    { path: 'edicion/:id', component: ReseniacalificacionCreaeditaComponent },
+    { path: 'buscarcantidadreseniasportienda', component: ResultadoReseniaComponent }
     ]
   }, {
     path: 'tipoproducto', component: TipoProductoComponent, children: [

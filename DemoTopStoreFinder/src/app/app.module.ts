@@ -81,6 +81,7 @@ import { TipoPagoResultadoqueryComponent } from './page/tipo-pago/tipo-pago-resu
 import { TiendaCantidadTiendasComponent } from './page/tienda/tienda-cantidad-tiendas/tienda-cantidad-tiendas.component';
 import { QueryCompradorUbicacionComponent } from './page/comprador-ubicacion/query-comprador-ubicacion/query-comprador-ubicacion.component';
 import { ResultadoProductoComponent } from './page/producto/resultado-producto/resultado-producto.component';
+import { ResultadoReseniaComponent } from './page/resenia-calificacion/resultado-resenia/resultado-resenia.component';
 
 
 @NgModule({
@@ -147,6 +148,7 @@ import { ResultadoProductoComponent } from './page/producto/resultado-producto/r
     TiendaCantidadTiendasComponent,
     QueryCompradorUbicacionComponent,
     ResultadoProductoComponent,
+    ResultadoReseniaComponent,
   ],
   imports: [
     BrowserModule,
