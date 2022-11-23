@@ -2,6 +2,7 @@ import { TipoProducto } from './../model/TipoProducto';
 import { Injectable } from '@angular/core';
 import { HttpClient, HttpXsrfTokenExtractor } from '@angular/common/http';
 import { Subject, EMPTY } from 'rxjs';
+import { ResultadoCantidadProductosTipo } from '../model/ResultadoCantidadProductosTipo';
 @Injectable({
   providedIn: 'root'
 })
@@ -19,6 +20,9 @@ export class TipoProductoService {
   }
   insertar(TipoProducto: TipoProducto) {
     return this.http.post(this.url, TipoProducto);
+  }
+  BuscarCantidadProductosTipo(){
+    return this.http.get<ResultadoCantidadProductosTipo[]>(`${this.url}/cantidadproductostipo`)
   }
   setLista(listaNueva: TipoProducto[]) {
     this.listaCambio.next(listaNueva);

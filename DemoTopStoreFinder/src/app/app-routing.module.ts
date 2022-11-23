@@ -1,3 +1,4 @@
+import { TipoProductoResultadoqueryComponent } from './page/tipo-producto/tipo-producto-resultadoquery/tipo-producto-resultadoquery.component';
 import { QueryCantidadPrecioDeterminadComponent } from './page/tienda-producto/query-cantidad-precio-determinad/query-cantidad-precio-determinad.component';
 import { ResultadoReseniaComponent } from './page/resenia-calificacion/resultado-resenia/resultado-resenia.component';
 import { ResultadoProductoComponent } from './page/producto/resultado-producto/resultado-producto.component';
@@ -52,7 +53,8 @@ const routes: Routes = [
   }, {
     path: 'tipoproducto', component: TipoProductoComponent, children: [
       {path: 'nuevo', component: TipoProductoCreaditaComponent},
-      { path: 'edicion/:id', component: TipoProductoCreaditaComponent }
+      { path: 'edicion/:id', component: TipoProductoCreaditaComponent },
+      {path: 'cantidadproductostipo', component: TipoProductoResultadoqueryComponent}
     ]
   }, {
     path: 'producto', component: ProductoComponent, children: [
