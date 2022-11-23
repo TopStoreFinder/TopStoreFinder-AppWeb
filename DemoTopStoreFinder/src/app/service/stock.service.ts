@@ -26,6 +26,10 @@ private confirmaEliminacion = new Subject<Boolean>()
     return this.http.get<ResultadoCantidadStockPorProducto[]>(`${this.url}/buscarstockporproducto`);
   }
 
+  BuscarStockPorProductoMenor50(){
+    return this.http.get<ResultadoCantidadStockPorProducto[]>(`${this.url}/buscarstockporproductomenor50`);
+  }
+
 
   setLista(listaNueva: Stock[]) {
     this.listaCambio.next(listaNueva);
