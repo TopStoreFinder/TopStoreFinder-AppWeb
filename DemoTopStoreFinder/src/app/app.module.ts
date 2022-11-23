@@ -80,6 +80,7 @@ import { CustomDateAdapter } from './custom-adapter';
 import { TipoPagoResultadoqueryComponent } from './page/tipo-pago/tipo-pago-resultadoquery/tipo-pago-resultadoquery.component';
 import { TiendaCantidadTiendasComponent } from './page/tienda/tienda-cantidad-tiendas/tienda-cantidad-tiendas.component';
 import { QueryCompradorUbicacionComponent } from './page/comprador-ubicacion/query-comprador-ubicacion/query-comprador-ubicacion.component';
+import { ResultadoProductoComponent } from './page/producto/resultado-producto/resultado-producto.component';
 
 
 @NgModule({
@@ -145,6 +146,7 @@ import { QueryCompradorUbicacionComponent } from './page/comprador-ubicacion/que
     TipoPagoResultadoqueryComponent,
     TiendaCantidadTiendasComponent,
     QueryCompradorUbicacionComponent,
+    ResultadoProductoComponent,
   ],
   imports: [
     BrowserModule,

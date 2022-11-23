@@ -1,3 +1,5 @@
+import { ResultadoProductoComponent } from './page/producto/resultado-producto/resultado-producto.component';
+import { ResultadoCantidadProductosporcadaTienda } from './model/ResultadoCantidadProductosporcadaTienda';
 import { QueryCompradorUbicacionComponent } from './page/comprador-ubicacion/query-comprador-ubicacion/query-comprador-ubicacion.component';
 import { TiendaCantidadTiendasComponent } from './page/tienda/tienda-cantidad-tiendas/tienda-cantidad-tiendas.component';
 import { TipoPagoResultadoqueryComponent } from './page/tipo-pago/tipo-pago-resultadoquery/tipo-pago-resultadoquery.component';
@@ -52,7 +54,8 @@ const routes: Routes = [
   }, {
     path: 'producto', component: ProductoComponent, children: [
       { path: 'nuevo', component: ProductoCreaeditaComponent },
-    { path: 'edicion/:id', component: ProductoCreaeditaComponent }
+    { path: 'edicion/:id', component: ProductoCreaeditaComponent },
+    { path: 'Cantidaddeproductosportienda', component: ResultadoProductoComponent }
     ]
   }, {
     path: 'compradorubicacion', component: CompradorUbicacionComponent, children: [
