@@ -1,4 +1,4 @@
 export class ResultadoCantidadStockPorProducto {
-    Nombre: String = "";
-    Cantidad: String = "";
+    nombre: String = "";
+    cantidad: String = "";
 }
