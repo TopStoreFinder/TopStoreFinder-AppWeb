@@ -23,7 +23,7 @@
     <br>
     <ng-container matColumnDef="ubicacionid">
       <th mat-header-cell *matHeaderCellDef> ubicacionid </th>
-      <td mat-cell *matCellDef="let element"> {{element.ubicacionid.id}} </td>
+      <td mat-cell *matCellDef="let element"> {{element.ubicacionid.latitud}}{{"-"}}{{element.ubicacionid.longitud}} </td>
     </ng-container>
 
     <ng-container matColumnDef="acciones">
